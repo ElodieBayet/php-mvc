@@ -50,7 +50,6 @@ class Request {
 
         // Avoid 'index.ext'
         $clear = preg_replace('/\/index\..{3,4}/', '', $uri);
-        // $clear = preg_replace('/\/php-mvc/', '', $url); // si dans demo.elo...
         // Extract path only
         $path = parse_url($clear, PHP_URL_PATH);
 

@@ -6,4 +6,4 @@ _notes/
 # Files
 *.log
 Thumbs.db
-_test.php
+_tests.php
