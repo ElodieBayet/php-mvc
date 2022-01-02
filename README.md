@@ -12,21 +12,21 @@ Le but n'est pas de fournir publiquement un _modèle_ ou un _template_ intégrab
 ---
 
 ## Sommaire 
-0. [0 - Présentation](#0---presentation)
-    * [0.0 - Objectifs](#0.0---objectifs)
-    * [0.1 - Contenu](#0.1---contenu)
-    * [0.2 - Évolution](#0.2---evolution)
-    * [0.3 - Utilisation](#0.3---utilisation)
-1. [1 - Démarrage](#1---demarrage)
-    * [1.0 - Prérequis](#1.0---prerequis)
-    * [1.1 - Configuration](#1.1---configuration)
-2. [2 - Structure](#2---structure)
-    * [2.0 - Architecture SEO](#2.0---architecture-seo)
-    * [2.1 - Dossiers et fichiers](#2.1---dossiers-et-fichiers)
-    * [2.2 - Base de données](#2.2---base-de-données)
-3. [3 - Méthodologie](#3---methodologie)
+0. [Présentation](#0---présentation)
+    * [0.0 - Objectifs](#00---objectifs)
+    * [0.1 - Contenu](#01---contenu)
+    * [0.2 - Évolution](#02---évolution)
+    * [0.3 - Utilisation](#03---utilisation)
+1. [Démarrage](#1---démarrage)
+    * [1.0 - Prérequis](#10---prérequis)
+    * [1.1 - Configuration](#11---configuration)
+2. [Structure](#2---structure)
+    * [2.0 - Architecture SEO](#20---architecture-seo)
+    * [2.1 - Dossiers et fichiers](#21---dossiers-et-fichiers)
+    * [2.2 - Base de données](#22---base-de-données)
+3. [Méthodologie](#3---méthodologie)
     * [3.0 - Développement](#3.0---développement)
-4. [4 - Remarques](#4---remarques)
+4. [Remarques](#4---remarques)
 
 ---
 
@@ -132,7 +132,7 @@ Chaque partie observe une structure spécifique. Laquelle est utile à découvri
 
 #### Schéma
 
-![Diagram of website structure](/assets/architecture_seo.jpg)
+![Website Tree](/assets/fig/architecture_seo.jpg)
 
 
 ### 2.1 - Dossiers et fichiers
@@ -181,7 +181,7 @@ Il n'y a aucune _librairie tierce_ dans ce projet.
 
 #### Entités
 
-![Diagram of Patron entity](/assets/patron_entity.jpg)
+![Patron entity](/assets/fig/patron_entity.jpg)
 
 ---
 
