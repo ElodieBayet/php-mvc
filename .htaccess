@@ -1,0 +1,7 @@
+Options -Indexes
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/(public|assets)/.*$ 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . /index.php [QSA,L]

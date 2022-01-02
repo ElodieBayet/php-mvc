@@ -1,0 +1,9 @@
+# Folders
+.vscode/
+_db/
+_notes/
+
+# Files
+*.log
+Thumbs.db
+_test.php
