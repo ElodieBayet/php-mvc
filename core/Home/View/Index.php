@@ -20,7 +20,7 @@
         </div>
         <div class="col-50">
             <h4>Les patrons GRASP</h4>    
-            <p>Sont des patrons créés par Craig Larman, qui décrivent des règles pour affecter les responsabilités aux classes d'un programme orienté objets pendant la conception, en liaison avec la méthode de conception BCE <span class="light">– pour “Boundary Control Entity”, c'est à dire MVC, “Modèle Vue Contrôleur” –</span>.</p>
+            <p>Sont des patrons créés par Craig Larman, qui décrivent des règles pour affecter les responsabilités aux classes d'un programme orienté objets pendant la conception, en liaison avec la méthode de conception BCE <span class="light">– pour “Boundary Control Entity”, c'est à dire MVC, “Modèle Vue Contrôleur”</span>.</p>
         </div>
         <div class="col-50">
             <h4>Les patrons d'entreprise</h4>
