@@ -2,6 +2,14 @@ Options -Indexes
 
 RewriteEngine on
 
-RewriteCond %{REQUEST_URI} !^/(public|assets)/.*$ 
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^fr/ fr/index.php [QSA,L]
+RewriteRule ^en/ en/index.php [QSA,L]
+
+RewriteCond %{REQUEST_URI} ^/(config|src|templates|translations|vendor)
 RewriteRule . /index.php [QSA,L]
+
+# Errors
+ErrorDocument 403 /forbidden.php
+ErrorDocument 404 /notfound.php
+ErrorDocument 500 /unavailable.php
+ErrorDocument 503 /unavailable.php

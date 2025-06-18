@@ -1,8 +1,15 @@
 # Folders
 .vscode/
-_db/
 _notes/
 
 # Files
-*.log
 Thumbs.db
+*.log
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+env.local.php
+env.php

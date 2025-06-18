@@ -1,21 +1,16 @@
 <?php
-declare(strict_types=1);
 
-/** @var string Preserve root of application */
-const __ROOT__ = __DIR__;
+/** @var string $lang :: Current language */
+$lang = strtolower(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
 
-/** 
- * @var array DATABASE :: Connection logins
- * @var array SECTIONS :: Associations of routes and class-managers 
- */
-require 'core/constants.php';
+if ($lang === 'fr' || $lang === 'en') {
+    // Redirect to local version if so
+    if ($_SERVER['SERVER_NAME'] === 'php-webapp.local') {
+        header('Location: /' . $lang . '/');
+        exit;    
+    }
+    header('Location: https://' . $_SERVER['SERVER_NAME'] . '/' . $lang . '/');
+    exit;
+}
 
-/** Class Auto Include */
-require './lib/phpmvc/ClassIncluder.php';
-ClassIncluder::register( ['phpmvc' => 'lib'] );
-
-/** Start Processus... */
-use phpmvc\Process;
-$process = new Process;
-$process->processing();
-$process->response()->send();
+require 'templates/root.php';

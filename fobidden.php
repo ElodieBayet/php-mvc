@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Application indisponible | PHP & MVC</title>
+		<title>Accès interdit | PHP & MVC</title>
 	<!-- Styles -->
 		<link href="https://demo.elodiebayet.com/neptune/assets/css/unavailable.css" rel="stylesheet" type="text/css" media="screen">
 		<link href="./assets/css/error.css" rel="stylesheet" type="text/css" media="screen">
@@ -54,15 +54,15 @@
 		</header>
         <main>
 			<header>
-				<h1 lang="fr">Application non disponible</h1>
-				<h1 lang="en">Unavailable Application</h1>
+				<h1 lang="fr">Accès interdit</h1>
+				<h1 lang="en">Forbidden</h1>
 			</header>
             
 			<section>
-                <h2 lang="fr">Numéro d'erreur 500</h2>
-                <h2 lang="en">Error number 500</h2>
-				<p lang="fr">Le service est donc indisponible. Un message d'erreur a été transmis à la Web Master. Navrée pour cette interruption et merci de revenir plus tard.</p>
-				<p lang="en">The service is therefore unavailable. An error message was sent to the Web Master. Sorry for this interruption and thank you for coming back later.</p>
+                <h2 lang="fr">Numéro d'erreur 403</h2>
+                <h2 lang="en">Error number 403</h2>
+				<p lang="fr">Cet espace n'est pas accessible au public. Merci de vous rediriger correctement en cliquant sur le logo.</p>
+				<p lang="en">This area isn't accessible to unauthorized users. Thanx to click on the logo for a correct redirection.</p>
 			</section>
 		</main>
         <footer>

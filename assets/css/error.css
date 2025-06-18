@@ -1,0 +1,18 @@
+/* 
+	Adjusments over Neptune
+*/
+
+.applogo .icon {
+    margin-left: -6vw;
+    width: 12vw;
+}
+@media (min-width: 470px) {
+    .applogo .title {
+        font-size: 5.2rem;
+        line-height: 10rem;
+    }
+    .applogo .icon {
+        margin-left: -32px;
+        width: 64px;
+    }
+}
