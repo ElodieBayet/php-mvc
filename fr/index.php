@@ -17,7 +17,7 @@ use Matrix\Foundation\HttpCore;
 try {
     $core = new HttpCore;
 } catch (\Exception $e) {
-    if ($_SERVER['SERVER_NAME'] === 'php-webapp.local') {
+    if ($_SERVER['SERVER_NAME'] === 'php-mvc.local') {
         echo "<pre>From 'fr/index.php' : " . $e->getMessage() . "</pre>";
         exit;
     }

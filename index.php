@@ -5,7 +5,7 @@ $lang = strtolower(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
 
 if ($lang === 'fr' || $lang === 'en') {
     // Redirect to local version if so
-    if ($_SERVER['SERVER_NAME'] === 'php-webapp.local') {
+    if ($_SERVER['SERVER_NAME'] === 'php-mvc.local') {
         header('Location: /' . $lang . '/');
         exit;    
     }
