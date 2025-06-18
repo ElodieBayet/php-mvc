@@ -11,14 +11,14 @@ Version | Objectif | Cadre | Démo
 Ce projet sert d'exemple de développement en PHP à travers l'architecture **Model-View-Controller** et le paradigme **Orienté Objet**.
 
 
-### **0.0** - Objectifs
+### Objectifs
 
 - Résoudre un système de routage en PHP
 - Respecter l'architecture Model-View-Controller et la Programmation Orientée Objets
 - Se préprarer à l'apprentissage d'un Framework professionnel comme Symfony
 
 
-### **0.1** - Exploitation
+### Exploitation
 
 Ce projet peut être utilisé dans un cadre d'apprentissage individuel et privé. Il ne convient pas pour une utilisation publique ou professionnelle.
 
@@ -31,29 +31,29 @@ Ce projet peut être utilisé dans un cadre d'apprentissage individuel et privé
 Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs et la base de données sont conçues en conséquence.
 
 
-### **1.0** - Sitemap
+### Sitemap
 
 - Sélection linguistique : `/`
-- "Accueil" | _"Home"_ : `/fr` | `/en`
-- "Périodes" | _"Périods"_ : `/fr/periodes` | `/en/periods`
-- "Compositeurs" | _"Compositors"_ : `/fr/compositeurs` | `/en/compositors`
+- **Accueil**  ||  **Home** : `/fr` | `/en`
+- **Périodes**  ||  **Périods** : `/fr/periodes` | `/en/periods`
+- **Compositeurs**  ||  **Compositors** : `/fr/compositeurs` | `/en/compositors`
     - Le ou la compositeur·rice : `/fr/compositeurs/{prenom-nom}` | `/en/compositors/{prenom-nom}`
-- "À propos" | _"About"_ : `/fr/a-propos` | `/en/about`
-- "Conception" | _"Design"_ : `/fr/conception` | `/en/design`
+- **À propos**  ||  **About** : `/fr/a-propos` | `/en/about`
+- **Conception**  ||  **Design** : `/fr/conception` | `/en/design`
 
 
-### **1.1** - Base de données
+### Base de données
 
 #### Schéma entités-associations
 
-![Schéma E-A](https://demo.elodiebayet.com/php-mvc/assets/img/schema_entites-associations.jpg)
+<img src="https://demo.elodiebayet.com/php-mvc/assets/img/schema_entites-associations.jpg" width="356" height="372">
 
 #### Schéma relationel
 
 ![Schéma relationel](https://demo.elodiebayet.com/php-mvc/assets/img/schema_relationel.jpg)
 
 
-### **1.2** - Diagramme logiciel
+### Diagramme logiciel
 
 #### Classes
 
@@ -75,14 +75,14 @@ Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs e
 
 Clônez ce _repository_ dans un répertoire local sur votre machine.
 
-### **2.0** - Prérequis
+### Prérequis
 
 - [Apache HTTP Server](https://httpd.apache.org/download.cgi)
 - [PHP](https://www.php.net/downloads.php)
 - [MySQL et Workbench](https://dev.mysql.com/downloads/)
 
 
-### **1.1** - Configuration
+### Configuration
 
 #### Virtual Host
 
@@ -129,7 +129,7 @@ Si vous déployez ce projet en ligne, dupliquez une nouvelle fois le fichier `en
 
 ## **2.** Remarques
 
-### *2.0** - Références
+### **2.0** - Références
 
 - [Wikibooks : Patrons de conception](https://fr.wikibooks.org/wiki/Patrons_de_conception)
 - [Wikipédia : Patron de conception](https://fr.wikipedia.org/wiki/Patron_de_conception)
