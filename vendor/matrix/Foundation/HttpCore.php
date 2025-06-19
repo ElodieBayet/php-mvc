@@ -51,13 +51,13 @@ final class HttpCore extends AbstractCore
             $response = $controller->$method(...$arguments);
         } catch (HttpErrorException $httpException) {
             if ($this->isDebugging()) {
-                echo '<pre>' . $httpException . '</pre>';
+                echo '<pre>From HttpCore : ' . $httpException->getMessage() . '</pre>';
                 exit;
             }
-            $response = AbstractResolver::httpErrorResponse($request, $page, $httpException->getHttpType());
+            $response = AbstractResolver::httpErrorResponse($page, $httpException->getHttpType());
         } catch (\Exception $exception) {
             if ($this->isDebugging()) {
-                echo '<pre>' . $exception . '</pre>';
+                echo '<pre>From HttpCore : ' . $exception->getMessage() . '</pre>';
                 exit;
             }
             header('Location: /unavailable.php', true, 307);

@@ -18,7 +18,7 @@ abstract class AbstractResolver
         $id = $page->getId();
 
         if (Page::HTTP_ERROR_ID === $id) {
-            new HttpErrorException("Can't find controller for '" . $request->getPath()[0] . "'", HttpErrorException::HTTP_NOT_FOUND);
+            throw new HttpErrorException("Can't find controller for '" . $request->getPath()[0] . "'", HttpErrorException::HTTP_NOT_FOUND);
         }
 
         $className = implode(
@@ -66,7 +66,7 @@ abstract class AbstractResolver
         return $arguments;
     }
 
-    public static function httpErrorResponse(Request $request, Page $page, string $httpErrorName): Response
+    public static function httpErrorResponse(Page $page, string $httpErrorName): Response
     {
         $page->setId(Page::HTTP_ERROR_ID);
         /** @var Controller  */
