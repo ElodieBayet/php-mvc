@@ -43,6 +43,7 @@
 					<span class="icon"><img src="https://www.elodiebayet.com/shared/trademark/elodie_bayet_side_icon_wt.svg" alt=""></span>
 					<span class="title" aria-hidden="true">PHP &amp; MVC</span>
 				</a>
+				<p><?= $this['ui']['baseline'] ?></p>
 			</div>
 			<div class="navigation">
 				<nav class="mainmenu">
