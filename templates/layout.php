@@ -39,7 +39,7 @@
 	<header id="uihead" class="closed">
 		<div class="inner">
 			<div class="headline">
-				<a href="./" class="applogo" title="<?= $this['ui']['returnto'] . ' : ' . $this['ui']['home'] ?>">
+				<a href="/" class="applogo" title="<?= $this['ui']['returnto'] . ' : ' . $this['ui']['home'] ?>">
 					<span class="icon"><img src="https://www.elodiebayet.com/shared/trademark/elodie_bayet_side_icon_wt.svg" alt=""></span>
 					<span class="title" aria-hidden="true">PHP &amp; MVC</span>
 				</a>
@@ -85,7 +85,7 @@
 	<footer id="uifoot">
 		<div class="headline">
 			<div>
-				<a href="./" class="applogo" title="Retourner à l'accueil du site">
+				<a href="/" class="applogo" title="<?= $this['ui']['returnto'] . ' : ' . $this['ui']['home'] ?>">
 					<span class="icon"><img src="https://www.elodiebayet.com/shared/trademark/elodie_bayet_side_icon_wt.svg" alt=""></span>
 					<span class="title">PHP &amp; MVC</span>
 				</a>

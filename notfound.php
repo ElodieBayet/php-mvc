@@ -6,7 +6,7 @@
 		<title>Contenu inexistant | PHP & MVC</title>
 	<!-- Styles -->
 		<link href="https://demo.elodiebayet.com/neptune/assets/css/unavailable.css" rel="stylesheet" type="text/css" media="screen">
-		<link href="./assets/css/error.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="/assets/css/error.css" rel="stylesheet" type="text/css" media="screen">
 	<!-- Identity and parameters -->
 		<meta name="description" content="La démo est temporairement indisponible">
 		<meta name="author" content="Elodie Bayet, www.elodiebayet.com">
@@ -36,7 +36,7 @@
     <body>
 		<header>
             <div class="block">
-                <a href="./" class="applogo" title="Retourner à l'accueil du site">
+                <a href="/" class="applogo" title="Retourner à l'accueil du site">
                     <span class="icon"><img src="https://www.elodiebayet.com/shared/trademark/elodie_bayet_side_icon_wt.svg" alt=""></span>
                 	<span class="title">PHP &amp; MVC</span>
                 </a>
@@ -67,12 +67,12 @@
 		</main>
         <footer>
             <div id="author">
-                <p>
-                    <span>Neptune &copy; 2020-2025 &mdash; Tous droits réservés &mdash; v.2.0 &mdash;</span>
-                    <a href="https://www.elodiebayet.com" title="Voir le site" target="_blank" rel="noopener">
-                        Développé par Elodie Bayet&nbsp;
-                        <img src="https://www.elodiebayet.com/shared/trademark/elodie_bayet_icon_wt.svg" alt="">
-                    </a>
+                <p lang="fr">
+					<span>PHP &amp; MVC &copy; 2021-2025 &mdash; Tous droits réservés &mdash; v.2.0 &mdash;</span>
+					<a href="https://www.elodiebayet.com" title="Voir le site" target="_blank" rel="noopener">
+						Développé par Elodie Bayet&nbsp;
+						<img src="https://www.elodiebayet.com/shared/trademark/elodie_bayet_icon_wt.svg" alt="Icône du Logo de Elodie Bayet représentant une plume stylisée dans un cercle épais">
+					</a>
                 </p>
             </div>
         </footer>
