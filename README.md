@@ -4,7 +4,9 @@ Version | Objectif | Cadre | Démo
 ------- | -------- | ----- | ----
 2.0 | Andragogie | Labo PHP | [PHP & MVC](https://demo.elodiebayet.com/php-mvc)
 
+
 ---
+
 
 ## **0.** Présentation
 
@@ -127,9 +129,17 @@ Si vous déployez ce projet en ligne, dupliquez une nouvelle fois le fichier `en
 ---
 
 
-## **2.** Remarques
+## **3.** Remarques
 
-### **2.0** - Références
+
+### Ressources
+
+Les ressources externes **CSS** et **JavaScript** sont à votre disposition gracieusement et **leur utilisation est autorisée**. Mais notez bien que ces ressources sont **susceptibles d'évoluer sans préavis** car elles ne font pas l'objet d'une librairie publique.
+
+En revanche, l'utilisation des ressources externes `.png`, `.jpg`, `.svg` figurant dans `/trademark` **est formellement interdite**. Si vous souhaitez utiliser et publier ce projet, **veuillez replacer ces images par vos logos et icônes**.
+
+
+### Références
 
 - [Wikibooks : Patrons de conception](https://fr.wikibooks.org/wiki/Patrons_de_conception)
 - [Wikipédia : Patron de conception](https://fr.wikipedia.org/wiki/Patron_de_conception)
