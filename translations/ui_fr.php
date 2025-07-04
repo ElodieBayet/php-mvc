@@ -5,6 +5,7 @@ return [
     // Home
     'home' => "Accueil",
     'baseline' => "Exemple de développement MVC &amp; OOP en PHP",
+    'subtitle' => "Support andradogique sur la programmaion en PHP. Thématique : Musique savante.",
     // Navigate :: title attributes, hidden titles
     'main' => "Menu principal",
     'second' => "Menu secondaire",

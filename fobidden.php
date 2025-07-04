@@ -24,14 +24,6 @@
 		<meta property="og:image:height" content="380">
 	<!-- Scripts -->
 		<script defer src="https://demo.elodiebayet.com/neptune/assets/js/individual.js"></script>
-	<!-- Audience Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XB8CY5WC7N"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-XB8CY5WC7N');
-		</script>
 	</head>
     <body>
 		<header>

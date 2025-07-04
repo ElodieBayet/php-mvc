@@ -5,6 +5,7 @@ return [
     // Root
     'home' => "Home",
     'baseline' => "Exemple of development MVC &amp; OOP with PHP",
+    'subtitle' => "Andragogic resource for PHP programming. Theme : Classical music.",
     // Navigate :: title attributes, hidden titles
     'main' => "Main menu",
     'second' => "Secondary menu",

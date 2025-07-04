@@ -10,6 +10,10 @@
     font-size: 2.7rem;
     line-height: 5.8rem;
 }
-main a.tab {
+main header p {
+    margin-top: 12px;
+}
+main header a.tab {
+    margin-top: 6px;;
     margin-right: 0;
 }

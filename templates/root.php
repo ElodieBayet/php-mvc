@@ -21,17 +21,6 @@
 		<meta property="og:image:type" content="image/jpeg">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="380">
-	<!-- Scripts -->
-		
-	<!-- Audience Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XB8CY5WC7N"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){ dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'G-XB8CY5WC7N');
-		</script>
-	</head>
     <body>
         <main>
 			<h1 class="applogo">

@@ -26,14 +26,6 @@
 	<meta property="og:image:height" content="380">
 <!-- Scripts -->
 	<script type="module" src="/assets/js/main.js" id="jsMain"></script>
-<!-- Audience Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XB8CY5WC7N"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){ dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'G-XB8CY5WC7N');
-	</script>
 </head>
 <body id="<?= $this['page']->getId() ?>">
 	<header id="uihead" class="closed">
@@ -78,6 +70,7 @@
 	<main>
 		<header>
 			<h1><?= $this['page']->getH1() ?></h1>
+			<p><?= $this['ui']['subtitle'] ?></p>
 			<a href="#" class="tab url"><span class="github">&nbsp;</span><?= $this['ui']['seeproject'] ?> GitHub</a>
 		</header>
 		<noscript><?= $this['ui']['jsoff'] ?></noscript>
