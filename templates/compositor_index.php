@@ -20,7 +20,7 @@
         <?php foreach ($this['compositors'] as $compositor) : ?>
             <?php
                 $periods = [];
-                $periods = array_filter($this['periods'], fn($period) => $period->id === $compositor->period_id);
+                $periods = array_filter($this['periods'], fn($period) => str_contains($compositor->periods, (string)$period->id));
             ?>
             <div class="col-50 topic" data-filter="<?= join(' ', array_map(fn($period) => $period->route, $periods)) ?>">
                 <a href="./<?= $this['path'][1] . '/' . $compositor->route ?>" class="route">

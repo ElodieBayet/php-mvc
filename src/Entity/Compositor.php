@@ -39,8 +39,8 @@ class Compositor extends AbstractEntity
 
     // Dynamic properties
 
-    /** @var int */
-    public $period_id;
+    /** @var string Set of periods from 'group_concat' */
+    public $periods;
     
     public function getBirthFormated(string $lang = 'fr'): string
     {

@@ -29,9 +29,10 @@ class CompositorRepository extends EntityRepository
             compositor.birth,
             compositor.death,
             compositor.route,
-            period_compositor.period_id
+            GROUP_CONCAT(period_compositor.period_id) AS periods
             FROM compositor
             INNER JOIN period_compositor ON period_compositor.compositor_id = compositor.id
+            GROUP BY compositor.id
             ORDER BY compositor.birth';
 
         $data = $this->queryFetchAll($query, Compositor::class);
