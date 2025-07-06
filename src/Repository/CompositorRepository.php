@@ -54,7 +54,8 @@ class CompositorRepository extends EntityRepository
             FROM compositor
             INNER JOIN period_compositor ON period_compositor.compositor_id = compositor.id
             WHERE period_compositor.period_id = :period
-            ORDER BY compositor.birth';
+            ORDER BY compositor.birth
+            LIMIT 20';
 
         $data = $this->queryFetchAll($query, Compositor::class, ['period' => $period]);
 

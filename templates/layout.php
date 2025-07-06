@@ -71,7 +71,7 @@
 		<header>
 			<h1><?= $this['page']->getH1() ?></h1>
 			<p><?= $this['ui']['subtitle'] ?></p>
-			<a href="#" class="tab url"><span class="github">&nbsp;</span><?= $this['ui']['seeproject'] ?> GitHub</a>
+			<a href="https://github.com/ElodieBayet/php-mvc" class="tab url"><span class="github">&nbsp;</span><?= $this['ui']['seeproject'] ?> GitHub</a>
 		</header>
 		<noscript><?= $this['ui']['jsoff'] ?></noscript>
 		<?= $this['content'] ?>
