@@ -7,7 +7,7 @@
  *   @file :: Main Program for Modules
  */
 
-import GUIServices from 'https://demo.elodiebayet.com/neptune/assets/js/lib/guiServices.js';
+import GUIService from 'https://demo.elodiebayet.com/neptune/assets/js/lib/guiService.js';
 import HeaderManager from 'https://demo.elodiebayet.com/neptune/assets/js/lib/headerManager.js';
 
 // Remove class '.nojs'
@@ -30,9 +30,9 @@ const source = 'https://demo.elodiebayet.com/neptune/assets/';
 				document.querySelector('#uihead .navigation')
 			);
 
-			GUIServices.delayedResizer(headerManager.autoCompute);
+			GUIService.delayedResizer(headerManager.autoCompute);
 		} catch (error) {
-			GUIServices.moduleError('Menu');
+			GUIService.moduleError('Menu');
 		}
 	}
 })();
