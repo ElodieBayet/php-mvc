@@ -2,14 +2,10 @@
 return [
     'project' => [
         'h2' => "Projet “PHP &amp; MVC”",
-        'p' => "<span class=\"light\">En bref :</span> (en cours de rédaction)",
+        'p' => "<span class=\"light\">Brief :</span> Ce projet sert d'exemple de développement d'un site web en <strong>vanilla PHP</strong> à travers l'architecture <strong>Model-View-Controller</strong> et le paradigme <strong>Orienté Objet</strong>.",
         'blocks' => [
             0 => [
-                'h3' => "Andragogy",
-                'p' => [
-                    "Ce projet sert d'exemple de développement d'un site web en <strong>vanilla PHP</strong> à travers l'architecture <strong>Model-View-Controller</strong> et le paradigme <strong>Orienté Objet</strong>.",
-                ],
-                'h4' => "Goals",
+                'h3' => "Andragogical goals",
                 'li' => [
                     "Résoudre un système de routage en PHP",
                     "Respecter l'architecture <strong>Model-View-Controller</strong> et la <strong>Programmation Orientée Objets</strong>",
@@ -17,13 +13,13 @@ return [
                 ],
             ],
             1 => [
-                'h3' => "Développement",
+                'h3' => "Development",
             ]
         ],
     ],
     'theme' => [
         'h2' => "Topic",
-        'p' => "<span class=\"light\">En bref :</span> (en cours de rédaction)",
+        'p' => "<span class=\"light\">Brief :</span> (en cours de rédaction)",
         'blocks' => [
             0 => [
                 'h3' => "Classical music",

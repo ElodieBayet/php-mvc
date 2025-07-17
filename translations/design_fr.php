@@ -1,7 +1,7 @@
 <?php
 return [
     'oop' => [
-        'h2' => "Programmation orientée objet",
+        'h2' => "Programmation orientée objet <span class=\"light\">&mdash; OOP</span>",
         'p' => "<span class=\"light\">En bref :</span> (en cours de rédaction)",
         'blocks' => [
             0 => [
@@ -23,7 +23,7 @@ return [
         ],
     ],
     'mvc' => [
-        'h2' => "Modèle Vue Contrôleur",
+        'h2' => "Modèle Vue Contrôleur <span class=\"light\">&mdash; MVC</span>",
         'p' => "<span class=\"light\">En bref :</span> Selon les principes de l'architecture MVC, un contrôleur capte une “demande” utilisateur, opère un traitement sur le modèle – si lieu – puis notifie la vue qui est alors “mise à jour”",
         'blocks' => [
             0 => [

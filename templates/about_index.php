@@ -4,10 +4,6 @@
     <div class="grid md">
         <div class="col-50">
             <h3><?= $this['texts']['project']['blocks'][0]['h3'] ?></h3>
-            <?php foreach ($this['texts']['project']['blocks'][0]['p'] as $p) : ?>
-                <p><?= $p ?></p>
-            <?php endforeach; ?>
-            <h4><?= $this['texts']['project']['blocks'][0]['h4'] ?></h4>
             <ul class="list">
                 <?php foreach ($this['texts']['project']['blocks'][0]['li'] as $li) : ?>
                     <li><?= $li ?></li>
