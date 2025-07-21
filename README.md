@@ -8,7 +8,7 @@ Version | Objectif | Cadre | Démo
 ---
 
 
-## **0.** Présentation
+## Présentation
 
 Ce projet sert d'exemple de développement en PHP à travers l'architecture **Model-View-Controller** et le paradigme **Orienté Objet**.
 
@@ -28,20 +28,22 @@ Ce projet peut être utilisé dans un cadre d'apprentissage individuel et privé
 ---
 
 
-## **1.** Description
+## Description
 
 Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs et la base de données sont conçues en conséquence.
 
 
 ### Sitemap
 
-- Sélection linguistique : `/`
-- **Accueil**  ||  **Home** : `/fr` | `/en`
-- **Périodes**  ||  **Périods** : `/fr/periodes` | `/en/periods`
-- **Compositeurs**  ||  **Compositors** : `/fr/compositeurs` | `/en/compositors`
-    - Le ou la compositeur·rice : `/fr/compositeurs/{prenom-nom}` | `/en/compositors/{prenom-nom}`
-- **À propos**  ||  **About** : `/fr/a-propos` | `/en/about`
-- **Conception**  ||  **Design** : `/fr/conception` | `/en/design`
+```sh
+"Sélection linguistique"
+├── "Accueil" || "Home"
+├── "Périodes" || "Périodes"
+├── "Compositeurs" || "Compositors"
+│   ├── "{nom}-{prenom}"
+├── "À propos" || "About"
+├── "Conception" || "Design"
+```
 
 
 ### Base de données
@@ -73,7 +75,7 @@ Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs e
 ---
 
 
-## **2.** Installation
+## Installation
 
 Clônez ce _repository_ dans un répertoire local sur votre machine.
 
@@ -129,7 +131,7 @@ Si vous déployez ce projet en ligne, dupliquez une nouvelle fois le fichier `en
 ---
 
 
-## **3.** Remarques
+## Remarques
 
 
 ### Ressources
