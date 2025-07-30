@@ -10,7 +10,7 @@ Version | Objectif | Cadre | Démo
 
 ## Présentation
 
-Ce projet sert d'exemple de développement en PHP à travers l'architecture **Model-View-Controller** et le paradigme **Orienté Objet**.
+Ce projet est un support de cours qui sert d'exemple de développement en PHP à travers l'architecture **Model-View-Controller** et le paradigme **Orienté Objet**.
 
 
 ### Objectifs
