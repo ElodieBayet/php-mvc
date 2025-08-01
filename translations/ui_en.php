@@ -1,7 +1,7 @@
 <?php
 return [
     // Personal
-    'author' => "<span>PHP &amp; MVC &copy; 2021-2025 &mdash; All rights reserved &mdash; v.2.0 &mdash;</span> <a href=\"https://www.elodiebayet.com\" title=\"Got to the website\" target=\"_blank\" rel=\"noopener\">Developed by Elodie Bayet&nbsp;<img src=\"https://www.elodiebayet.com/shared/trademark/elodie_bayet_icon_wt.svg\" alt=\"\"></a>",
+    'author' => "<span>PHP &amp; MVC &copy; 2019-2025 &mdash; All rights reserved &mdash; v.2.0 &mdash;</span> <a href=\"https://www.elodiebayet.com\" title=\"Got to the website\" target=\"_blank\" rel=\"noopener\">Developed by Elodie Bayet&nbsp;<img src=\"https://www.elodiebayet.com/shared/trademark/elodie_bayet_icon_wt.svg\" alt=\"\"></a>",
     // Root
     'home' => "Home",
     'baseline' => "Exemple of development MVC &amp; OOP with PHP",

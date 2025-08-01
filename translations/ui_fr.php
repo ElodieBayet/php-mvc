@@ -1,7 +1,7 @@
 <?php
 return [
     // Personal
-    'author' => "<span>PHP &amp; MVC &copy; 2021-2025 &mdash; Tous droits réservés &mdash; v.2.0 &mdash;</span> <a href=\"https://www.elodiebayet.com\" title=\"Voir le site\" target=\"_blank\" rel=\"noopener\">Développé par Elodie Bayet&nbsp;<img src=\"https://www.elodiebayet.com/shared/trademark/elodie_bayet_icon_wt.svg\" alt=\"Icône du Logo de Elodie Bayet représentant une plume stylisée dans un cercle épais\"></a>",
+    'author' => "<span>PHP &amp; MVC &copy; 2019-2025 &mdash; Tous droits réservés &mdash; v.2.0 &mdash;</span> <a href=\"https://www.elodiebayet.com\" title=\"Voir le site\" target=\"_blank\" rel=\"noopener\">Développé par Elodie Bayet&nbsp;<img src=\"https://www.elodiebayet.com/shared/trademark/elodie_bayet_icon_wt.svg\" alt=\"Icône du Logo de Elodie Bayet représentant une plume stylisée dans un cercle épais\"></a>",
     // Home
     'home' => "Accueil",
     'baseline' => "Exemple de développement MVC &amp; OOP en PHP",
