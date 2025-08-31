@@ -4,8 +4,8 @@ namespace Matrix\Foundation;
 
 class HttpErrorException extends \Exception
 {
-    public const HTTP_BAD_REQUEST = 'badRequest';
-    public const HTTP_NOT_FOUND = 'notFound';
+    public const HTTP_BAD_REQUEST = 'bad_bequest';
+    public const HTTP_NOT_FOUND = 'not_found';
 
     /** @var string $httpType */
     private $httpType;

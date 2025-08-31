@@ -14,8 +14,10 @@ class HttpErrorController extends AbstractController
         /** @var array $texts */
         $texts = $this->loadStaticTexts(parent::$page->getId() . '_' . parent::$page->getLang() . '.php');
 
-        if (true === array_key_exists($httpErrorName, $texts)) {
-            $texts = $texts[$httpErrorName];
+        $errorKey = implode(explode('-', $httpErrorName));
+
+        if (true === array_key_exists($errorKey, $texts)) {
+            $texts = $texts[$errorKey];
         } else {
             $texts['h1'] = "Erreur";
             $texts['h2'] = "Contenu indéterminé";
@@ -27,7 +29,6 @@ class HttpErrorController extends AbstractController
 
         $content = $this->render('http_error.php', ['texts' => $texts]);
 
-        /** @todo Avoid static value 'badRequest' : Consider at least class constant */
-        return new Response($content, $httpErrorName === 'badRequest' ? Response::HTTP_BAD_REQUEST : Response::HTTP_NOT_FOUND);
+        return new Response($content, Response::{'HTTP_' . strtoupper($httpErrorName)});
     }
 }
