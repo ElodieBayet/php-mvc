@@ -5,7 +5,7 @@ RewriteEngine on
 RewriteRule ^fr/ fr/index.php [QSA,L]
 RewriteRule ^en/ en/index.php [QSA,L]
 
-RewriteCond %{REQUEST_URI} ^/(config|src|templates|translations|vendor)
+RewriteCond %{REQUEST_URI} ^/(config|src|templates|translations|vendor|env)
 RewriteRule . /index.php [QSA,L]
 
 # Errors
