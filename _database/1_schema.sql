@@ -4,6 +4,7 @@
 -- Exécution : 1
 --
 
+USE php_mvc;
 
 CREATE TABLE `period` (
     `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -58,6 +59,10 @@ CREATE TABLE `period_compositor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
+
+ALTER TABLE `period_compositor`
+    ADD CONSTRAINT `FK_period_compositor__period_id` FOREIGN KEY (`period_id`) REFERENCES `period`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    ADD CONSTRAINT `FK_period_compositor__compositor_id` FOREIGN KEY (`compositor_id`) REFERENCES `compositor`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `fr_period`
     ADD CONSTRAINT `FK_fr_period__period_id` FOREIGN KEY (`period_id`) REFERENCES `period`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;

@@ -4,6 +4,8 @@
 -- Exécution : 2
 --
 
+USE php_mvc;
+
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (1, 600, 1400);
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (2, 1400, 1600);
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (3, 1600, 1750);

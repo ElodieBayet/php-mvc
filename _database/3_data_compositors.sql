@@ -4,6 +4,8 @@
 -- Exécution : 3
 --
 
+USE php_mvc;
+
 -- Moyen-Âge : 1
 INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
 VALUES (
