@@ -48,7 +48,7 @@ class CompositorController extends AbstractController
         $periods = $periodRepository->findAllPeriodsByCompositor($compositor->id, parent::$page->getLang());
 
         if (null === $compositor) {
-            throw new HttpErrorException("Can't find Controller for route '$slug'", HttpErrorException::HTTP_NOT_FOUND);
+            throw new HttpErrorException("No compositor found for route '$slug'", HttpErrorException::HTTP_NOT_FOUND);
         }
 
         if (null !== $compositor) {
