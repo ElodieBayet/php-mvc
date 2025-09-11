@@ -22,14 +22,11 @@ class Response
         'Content-Type' => "text/html; charset=UTF-8",
     ];
 
-    /** @var int $statusCode */
-    private $statusCode;
+    private int $statusCode;
 
-    /** @var array $headers */
-    private $headers;
+    private array $headers;
 
-    /** @var string $body */
-    private $body;
+    private string $body;
 
     /**
      * Build parts for Response

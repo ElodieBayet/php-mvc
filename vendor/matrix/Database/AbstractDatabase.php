@@ -48,7 +48,7 @@ abstract class AbstractDatabase
             return new \PDO($db['dsn'], $db['user'], $db['word'], self::$options);
         } catch (\PDOException $pdoError) {
             if ($this->isDebugging()) {
-                echo '<pre>' . $pdoError->getMessage() . '</pre>';
+                echo '<pre>Database ::<br>' . $pdoError->getMessage() . '</pre>';
                 exit;
             }
             throw new \Exception("Can't connect to database for reason\n" . $pdoError->getMessage());

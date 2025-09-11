@@ -7,24 +7,18 @@ namespace Matrix\Http;
 class Request
 {
     public const METHOD_GET = 'GET';
-    public const METHOD_POST = 'POST';
 
     public const LANGUAGE = 'fr';
 
-    /** @var string $method */
-    private static $method;
+    private static string $method;
 
-    /** @var string $uri Raw URI */
-    private static $uri;
+    private static string $uri;
 
-    /** @var string $locale Root of URI that must contain language version */
-    private static $locale;
+    /** Language provided by root of URL */
+    private static string $locale;
 
-    /** @var array $path Array of URI splited after language version */
-    private static $path;
-
-    /** @var string $query Array of query part splited as key => value(s) */
-    private static $query;
+    /** Array splited after language version */
+    private static array $path;
 
     /**
      * Build a Request
@@ -61,11 +55,6 @@ class Request
         return self::$path ?? [];
     }
 
-    public function getQuery(): array
-    {
-        return self::$query ?? [];
-    }
-
     private function initialize(array $languages): void
     {
         // Request contains at least one character for '/' after language redirection or selection
@@ -74,7 +63,7 @@ class Request
         }
 
         // Clear /index.{ext} if so
-        $uri = preg_replace('/\/index\..{3,4}/', '', self::$uri);
+        $uri = preg_replace('/\/index\..{,4}/', '', self::$uri);
         $parsed = parse_url($uri);
 
         if (isset($parsed['path'])) {
@@ -84,24 +73,11 @@ class Request
                 self::$locale = array_shift(self::$path);
             }
 
-            self::$path[0] = self::$path[0] ?? ''; // forced to '' for root access
+            // forced to '' for root access
+            self::$path[0] = self::$path[0] ?? '';
         
             if (self::$path[0] !== '' && false !== end(self::$path)) {
                 self::$path[array_key_last(self::$path)] = preg_replace('/\.php/', '', end(self::$path));
-            }
-        }
-
-        if (isset($parsed['query'])) {
-            $qBag = explode('&', $parsed['query']);
-            foreach ($qBag as $entry) {
-                $eqPos = strpos($entry, '=')?: null;
-                if (str_contains($entry, '[]')) {
-                    $key = substr($entry, 0, strpos($entry, '['));
-                    self::$query[$key][] = substr($entry, $eqPos+1);
-                } else {
-                    $key = substr($entry, 0, $eqPos);
-                    self::$query[$key] = null !== $eqPos ? substr($entry, $eqPos+1) : '';
-                }
             }
         }
     }

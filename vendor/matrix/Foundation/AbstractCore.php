@@ -18,10 +18,10 @@ abstract class AbstractCore
 {
     use EnvironmentTrait;
 
-    /** @var array $appLanguages Contains available languages */
+    /** Available languages provided by ./config/structure.php */
     protected static array $appLanguages;
 
-    /** @var array $appSitemap Contains available routes and their properties */
+    /** Available routes with properties provided by ./config/structure.php */
     protected static array $appSitemap;
 
     public function __construct()

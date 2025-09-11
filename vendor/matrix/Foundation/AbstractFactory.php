@@ -62,7 +62,7 @@ abstract class AbstractFactory
      */
     public static function pageMeta(Page $page, array $appSitemap): void
     {
-        if ($page->getSection() !== null) {
+        if (null !== $page->getSection()) {
             $details = $appSitemap[$page->getSection()][$page->getId()][$page->getLang()];
             $page->setTitle($details['label']);
             $page->setDescription($details['description']);
@@ -76,7 +76,7 @@ abstract class AbstractFactory
     {
         foreach ($appSitemap as $section => $routes) {
             $id = $page->getId();
-            if (key_exists($id, $routes)) {
+            if (array_key_exists($id, $routes)) {
                 foreach ($routes[$id] as $isoCode => $version) {
                     $language = new Language(
                         isoCode: $isoCode,

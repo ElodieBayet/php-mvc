@@ -6,17 +6,15 @@ namespace Matrix\Model;
 
 class Language
 {
-    /** @var string $isoCode International normalized code of current language */
-    private $isoCode;
+    /** International normalized code */
+    private string $isoCode;
 
-    /** @var string $label Display name of current language */
-    private $label;
+    /** Short name */
+    private string $label;
 
-    /** @var string $title Fullname of current language */
-    private $title;
+    private string $title;
 
-    /** @var Route $route */
-    private $route;
+    private Route $route;
 
     public function __construct(string $isoCode, string $label, string $title, Route $route)
     {
@@ -33,12 +31,12 @@ class Language
 
     public function getLabel(): string
     {
-        return $this->label?: '';
+        return $this->label ?: '';
     }
 
     public function getTitle(): string
     {
-        return $this->title?: '';
+        return $this->title ?: '';
     }
 
     public function getRoute(): Route

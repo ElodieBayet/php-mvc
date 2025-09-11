@@ -12,16 +12,16 @@ class EntityRepository extends AbstractDatabase
     use EnvironmentTrait;
 
     /**
-     * Handle a query for a single dataset
+     * Handle a query to get one tuple
      *
      * @uses PDOStatement::setFetchMode at PDO::FETCH_CLASS
      * @uses PDOStatement::fetch
      *
-     * @param string $sql Request in SQL format
-     * @param string $entity Entity class name
-     * @param array $params List of keys / values for prepared queries
+     * @param string $sql Request in SQL
+     * @param string $entity Class name
+     * @param array $params List of key => value to bind
      *
-     * @return mixed The fulfilled entity or null
+     * @return mixed Instance or null
      */
     public function queryFetch(string $sql, string $entity, array $params): mixed
     {
@@ -37,7 +37,7 @@ class EntityRepository extends AbstractDatabase
             $query->closeCursor();
         } catch (\PDOException $queryError) {
             if ($this->isDebugging()) {
-                echo '<pre>' . $queryError . '</pre>';
+                echo '<pre>Database ::<br>' . $queryError . '</pre>';
                 exit;
             }
         }
@@ -46,34 +46,34 @@ class EntityRepository extends AbstractDatabase
     }
 
     /**
-     * Handle a query for a collection of data
+     * Handle a query to get a collection of tuples
      *
      * @uses PDOStatement::setFetchMode at PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE
      * @uses PDOStatement::fetchAll
      *
-     * @param string $sql Request in SQL format
-     * @param string $entity Entity class name
-     * @param array $params List of keys / values for prepared queries
+     * @param string $sql Request in SQL
+     * @param string $entity Class name
+     * @param array $params List of key => value to bind
      *
-     * @return array Collection of entities or empty
+     * @return array Collection of instance or empty
      */
     public function queryFetchAll(string $sql, string $entity, array $params = []): array
     {
         $collection = [];
         
         try {
-            if ($params) {
+            if (empty($params)) {
+                $query = self::$pdo->query($sql);
+            } else {
                 $query = self::$pdo->prepare($sql);
                 $query->execute($params);
-            } else {
-                $query = self::$pdo->query($sql);
             }
             $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, $entity);
             $collection = $query->fetchAll();
             $query->closeCursor();
         } catch (\PDOException $queryError) {
             if ($this->isDebugging()) {
-                echo '<pre>' . $queryError . '</pre>';
+                echo '<pre>Database ::<br>' . $queryError . '</pre>';
                 exit;
             }
         }
@@ -82,31 +82,31 @@ class EntityRepository extends AbstractDatabase
     }
 
     /**
-     * Handle a query for aggregate
+     * Handle a no-entity query
      *
      * @uses PDOStatement::fetch
      *
-     * @param string $sql Request in SQL format
-     * @param array $param List of keys / values for prepared queries
+     * @param string $sql Request in SQL
+     * @param array $params List of key => value to bind
      *
-     * @return mixed The result of aggregation
+     * @return mixed Associated array as column name => value
      */
-    public function queryAggregate(string $sql, array $params = []): mixed
+    public function queryExecute(string $sql, array $params = []): mixed
     {
         $result = null;
 
         try {
-            if ($params) {
+            if (empty($params)) {
+                $query = self::$pdo->query($sql);
+            } else {
                 $query = self::$pdo->prepare($sql);
                 $query->execute($params);
-            } else {
-                $query = self::$pdo->query($sql);
             }
             $result = $query->fetch();
             $query->closeCursor();
         } catch (\PDOException $queryError) {
             if ($this->isDebugging()) {
-                echo '<pre>' . $queryError . '</pre>';
+                echo '<pre>Database ::<br>' . $queryError . '</pre>';
                 exit;
             }
         }

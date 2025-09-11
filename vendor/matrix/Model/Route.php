@@ -6,14 +6,12 @@ namespace Matrix\Model;
 
 class Route
 {
-    /** @var string $code Route identifier */
-    private $code;
+    /** Unique identifier. Equals Page id */
+    private string $code;
 
-   /** @var string $slug Route pointer */
-    private $slug;
+    private string $slug;
 
-    /** @var string $label Route displaying title */
-    private $label;
+    private string $label;
 
     public function __construct(string $code, string $slug, string $label)
     {

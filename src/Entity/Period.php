@@ -6,24 +6,22 @@ namespace App\Entity;
 
 use Matrix\Database\AbstractEntity;
 
+/**
+ * All properties are public due to fetch mode PDO::FETCH_CLASS
+ */
 class Period extends AbstractEntity
 {
-    /** @var int */
-    public $begin;
+    public int $begin;
 
-    /** @var int|null */
-    public $end;
+    public null|int $end;
 
     // Joined translation
 
-    /** @var string */
-    public $route;
+    public string $route;
 
-    /** @var string */
-    public $name;
+    public string $name;
 
-    /** @var string */
-    public $description;
+    public string $description;
 
     // Joined entities
     

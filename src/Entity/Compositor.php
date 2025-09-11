@@ -6,28 +6,24 @@ namespace App\Entity;
 
 use Matrix\Database\AbstractEntity;
 
+/**
+ * All properties are public due to fetch mode PDO::FETCH_CLASS
+ */
 class Compositor extends AbstractEntity
 {
-    /** @var string */
-    public $lastname;
+    public string $lastname;
 
-    /** @var string */
-    public $firstname;
+    public string $firstname;
 
-    /** @var string */
-    public $birth;
+    public string $birth;
 
-    /** @var string */
-    public $death;
+    public string $death;
 
-    /** @var string */
-    public $origin;
+    public string $origin;
 
-    /** @var string */
-    public $figure;
+    public null|string $figure;
 
-    /** @var string */
-    public $route;
+    public string $route;
 
     // Subentities
     

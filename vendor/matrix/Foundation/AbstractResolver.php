@@ -69,8 +69,10 @@ abstract class AbstractResolver
     public static function httpErrorResponse(Page $page, string $httpErrorName): Response
     {
         $page->setId(Page::HTTP_ERROR_ID);
-        /** @var Controller  */
+
+        /** @var Controller */
         $className = 'Matrix\\Controller\\HttpErrorController';
+
         /** @var HttpErrorController $controller */
         $controller = new $className($page);
 

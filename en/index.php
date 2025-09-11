@@ -18,7 +18,7 @@ try {
     $core = new HttpCore;
 } catch (\Exception $e) {
     if ($_SERVER['SERVER_NAME'] === 'php-mvc.local') {
-        echo "<pre>From 'en/index.php' : " . $e->getMessage() . "</pre>";
+        echo "<pre>en/index.php ::<br>" . $e->getMessage() . "</pre>";
         exit;
     }
     header('Location: /unavailable.php', true, 307);

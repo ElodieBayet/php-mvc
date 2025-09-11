@@ -6,6 +6,5 @@ namespace Matrix\Database;
 
 abstract class AbstractEntity
 {
-    /** @var int */
-    public $id;
+    public int $id;
 }

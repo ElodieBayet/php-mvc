@@ -11,35 +11,34 @@ class Page
 {
     public const HTTP_ERROR_ID = 'http-error';
 
-    /** @var string $lang Identificate the version of current page by ISO language code */
-    private static $lang;
+    /** Identificate the version by ISO language code */
+    private static string $lang;
 
-    /** @var null|string $id Identificate the current page */
-    private static $id;
+    private static null|string $id;
 
-    /** @var string $title SEO readable title */
-    private static $title;
+    /** SEO readable title */
+    private static string $title;
 
-    /** @var string $description SEO description of content */
-    private static $description;
+    /** SEO description of content */
+    private static string $description;
 
-    /** @var null|string $ads Image URI for sharing (optional) */
-    private static $ads;
+    /** Image URI for sharing (optional) */
+    private static null|string $ads;
 
-    /** @var Route[] $mains Contains routes for main navigation */
+    /** @var Route[] $mains Routes for main navigation */
     private static $mains = [];
 
-    /** @var Route[] $seconds Contains routes for secondary navigation */
+    /** @var Route[] $seconds Routes for secondary navigation */
     private static $seconds = [];
 
-    /** @var null|string The name of current section */
-    private static $section;
+    /** Name section */
+    private static null|string $section;
 
     /** @var Language[] $versions Contains other versions of current page */
     private static $versions = [];
 
-    /** @var string $h1 Contains value for <h1> of current page (optional) */
-    private static $h1;
+    /** $title returned by default */
+    private static null|string $h1;
 
     public function __construct(string $lang)
     {

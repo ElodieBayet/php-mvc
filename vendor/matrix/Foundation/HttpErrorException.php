@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Matrix\Foundation;
 
 class HttpErrorException extends \Exception
@@ -7,8 +9,7 @@ class HttpErrorException extends \Exception
     public const HTTP_BAD_REQUEST = 'bad_bequest';
     public const HTTP_NOT_FOUND = 'not_found';
 
-    /** @var string $httpType */
-    private $httpType;
+    private string $httpType;
 
     public function __construct(string $message, string $httpType, $code = 0)
     {

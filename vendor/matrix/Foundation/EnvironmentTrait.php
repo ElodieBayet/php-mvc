@@ -6,7 +6,6 @@ namespace Matrix\Foundation;
 
 trait EnvironmentTrait
 {
-    /** @var bool $isDebugging Define debugging mode (default : true) */
     private static bool $isDebugging = true;
 
     protected function isDebugging(): bool

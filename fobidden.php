@@ -8,16 +8,16 @@
 		<link href="https://demo.elodiebayet.com/neptune/assets/css/unavailable.css" rel="stylesheet" type="text/css" media="screen">
 		<link href="/assets/css/error.css" rel="stylesheet" type="text/css" media="screen">
 	<!-- Identity and parameters -->
-		<meta name="description" content="La démo est temporairement indisponible">
+		<meta name="description" content="Cet espace n'est pas accessible publiquement">
 		<meta name="author" content="Elodie Bayet, www.elodiebayet.com">
 		<meta name="copyright" content="Elodie Bayet © 2025">
 		<meta name="theme-color" content="#0c7f8e">
 		<link rel="icon" href="https://www.elodiebayet.com/shared/trademark/elodie_bayet_side_favicon.png" type="image/png">
 	<!-- Sharing Properties -->
-		<meta property="og:title" content="Application indisponible | PHP & MVC">
+		<meta property="og:title" content="Accès interdit | PHP & MVC">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://demo.elodiebayet.com/php-mvc">
-		<meta property="og:description" content="La démo est temporairement indisponible">
+		<meta property="og:description" content="Cet espace n'est pas accessible publiquement">
 		<meta property="og:image" content="https://www.elodiebayet.com/assets/ads/elodiebayet_websitebanner.jpg">
 		<meta property="og:image:type" content="image/jpeg">
 		<meta property="og:image:width" content="1200">
