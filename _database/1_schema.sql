@@ -18,20 +18,22 @@ CREATE TABLE `fr_period` (
     `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(32) NOT NULL,
     `description` VARCHAR(1024),
-    `route` VARCHAR(32) NOT NULL,
+    `tag` VARCHAR(128) NOT NULL,
     `period_id` SMALLINT UNSIGNED NOT NULL UNIQUE,
     --
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `UQ_fr_period__tag` (`tag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE `en_period` (
     `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(32) NOT NULL,
     `description` VARCHAR(1024),
-    `route` VARCHAR(32) NOT NULL,
+    `tag` VARCHAR(128) NOT NULL,
     `period_id` SMALLINT UNSIGNED NOT NULL UNIQUE,
     --
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `UQ_en_period__tag` (`tag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
@@ -44,9 +46,11 @@ CREATE TABLE `compositor` (
     `death` DATE NOT NULL,
     `origin` VARCHAR(32),
     `figure` VARCHAR(512),
-    `route` VARCHAR(32) NOT NULL,
+    `tag` VARCHAR(128) NOT NULL,
     --
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `UQ_compositor__fullname` (`lastname`, `firstname`),
+    UNIQUE KEY `UQ_compositor__tag` (`tag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 

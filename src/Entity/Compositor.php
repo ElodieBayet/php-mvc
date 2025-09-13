@@ -23,20 +23,64 @@ class Compositor extends AbstractEntity
 
     public null|string $figure;
 
-    public string $route;
-
-    // Subentities
-    
-    /** @var Compositor */
-    public $previous;
-
-    /** @var Compositor */
-    public $next;
+    public string $tag;
 
     // Dynamic properties
 
-    /** @var string Set of periods from 'group_concat' */
-    public $periods;
+    public null|string|array $periodIds = [];
+
+    public function __construct()
+    {
+        if (is_null($this->periodIds)) {
+            $this->periodIds = [];
+        }
+
+        if (is_string($this->periodIds)) {
+            $this->periodIds = array_map(function($id) {
+                return (int) $id;
+            }, explode(', ', $this->periodIds));
+        }
+    }
+
+    public function getLastname(): string
+    {
+        return $this->lastname;
+    }
+
+    public function getFirstname(): string
+    {
+        return $this->firstname;
+    }
+
+    public function getBirth(): string
+    {
+        return $this->birth;
+    }
+
+    public function getDeath(): string
+    {
+        return $this->death;
+    }
+
+    public function getOrigin(): null|string
+    {
+        return $this->origin;
+    }
+
+    public function getFigure(): null|string
+    {
+        return $this->figure;
+    }
+
+    public function getTag(): string
+    {
+        return $this->tag;
+    }
+
+    public function getPeriodIds(): string|array
+    {
+        return $this->periodIds;
+    }
     
     public function getBirthFormated(string $lang = 'fr'): string
     {

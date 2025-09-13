@@ -16,7 +16,7 @@ INSERT INTO `period` (`id`, `begin`, `end`) VALUES (7, 1950, NULL);
 
 -- Français
 
-INSERT INTO `fr_period` (`id`, `route`, `name`, `description`, `period_id`)
+INSERT INTO `fr_period` (`id`, `tag`, `name`, `description`, `period_id`)
 VALUES (
     NULL,
     "moyen-age",
@@ -25,7 +25,7 @@ VALUES (
     1
 );
 
-INSERT INTO `fr_period` (`id`, `route`, `name`, `description`, `period_id`)
+INSERT INTO `fr_period` (`id`, `tag`, `name`, `description`, `period_id`)
 VALUES (
     NULL,
     "renaissance",
@@ -34,7 +34,7 @@ VALUES (
     2
 );
 
-INSERT INTO `fr_period` (`id`, `route`, `name`, `description`, `period_id`)
+INSERT INTO `fr_period` (`id`, `tag`, `name`, `description`, `period_id`)
 VALUES (
     NULL,
     "baroque",
@@ -43,7 +43,7 @@ VALUES (
     3
 );
 
-INSERT INTO `fr_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `fr_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "classique",
@@ -52,7 +52,7 @@ VALUES (
     4
 );
 
-INSERT INTO `fr_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `fr_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "romantique",
@@ -61,7 +61,7 @@ VALUES (
     5
 );
 
-INSERT INTO `fr_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `fr_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "moderne",
@@ -70,7 +70,7 @@ VALUES (
     6
 );
 
-INSERT INTO `fr_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `fr_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "contemporaine",
@@ -81,7 +81,7 @@ VALUES (
 
 -- English
 
-INSERT INTO `en_period` (`id`, `route`, `name`, `description`, `period_id`)
+INSERT INTO `en_period` (`id`, `tag`, `name`, `description`, `period_id`)
 VALUES (
     NULL,
     "medieval",
@@ -90,7 +90,7 @@ VALUES (
     1
 );
 
-INSERT INTO `en_period` (`id`, `route`, `name`, `description`, `period_id`)
+INSERT INTO `en_period` (`id`, `tag`, `name`, `description`, `period_id`)
 VALUES (
     NULL,
     "renaissance",
@@ -99,7 +99,7 @@ VALUES (
     2
 );
 
-INSERT INTO `en_period` (`id`, `route`, `name`, `description`, `period_id`)
+INSERT INTO `en_period` (`id`, `tag`, `name`, `description`, `period_id`)
 VALUES (
     NULL,
     "baroque",
@@ -108,7 +108,7 @@ VALUES (
     3
 );
 
-INSERT INTO `en_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `en_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "classical",
@@ -117,7 +117,7 @@ VALUES (
     4
 );
 
-INSERT INTO `en_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `en_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "romantic",
@@ -126,7 +126,7 @@ VALUES (
     5
 );
 
-INSERT INTO `en_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `en_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "modernism",
@@ -135,7 +135,7 @@ VALUES (
     6
 );
 
-INSERT INTO `en_period` (`id`, `route`, `name`, `description`, `period_id`) 
+INSERT INTO `en_period` (`id`, `tag`, `name`, `description`, `period_id`) 
 VALUES (
     NULL,
     "contemporary",

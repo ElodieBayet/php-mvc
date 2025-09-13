@@ -18,7 +18,6 @@ class CompositorController extends AbstractController
         CompositorRepository $compositorRepository,
         PeriodRepository $periodRepository,
     ): Response {
-        /** @var Compositor[] $compositors */
         $compositors = $compositorRepository->findAllCompositors();
         $periods = $periodRepository->findAllPeriods(parent::$page->getLang());
 
@@ -43,41 +42,40 @@ class CompositorController extends AbstractController
         PeriodRepository $periodRepository,
         string $slug
     ): Response {
-        /** @var null|Compositor $compositor */
-        $compositor = $compositorRepository->findCompositorByRoute($slug);
-        $periods = $periodRepository->findAllPeriodsByCompositor($compositor->id, parent::$page->getLang());
+        $compositor = $compositorRepository->findCompositorByTag($slug);
+        $periods = $periodRepository->findPeriodsByCompositor($compositor, parent::$page->getLang());
 
         if (null === $compositor) {
             throw new HttpErrorException("No compositor found for route '$slug'", HttpErrorException::HTTP_NOT_FOUND);
         }
 
-        if (null !== $compositor) {
-            $compositor->previous = $compositorRepository->findSibling(
-                $compositor->birth,
-                CompositorRepository::OLD
-            );
-            $compositor->next = $compositorRepository->findSibling(
-                $compositor->birth,
-                CompositorRepository::YOUNG
-            );
-        }
+        $previousCompositor = $compositorRepository->findSiblingByBirthDate(
+            $compositor->getBirth(),
+            CompositorRepository::OLD
+        );
+        $nextCompositor = $compositorRepository->findSiblingByBirthDate(
+            $compositor->getBirth(),
+            CompositorRepository::YOUNG
+        );
 
         /** @var array $texts */
         $texts = $this->loadStaticTexts(parent::$page->getId() . '_view_' . parent::$page->getLang() . '.php');
 
-        parent::$page->overloadTitle($compositor->firstname . ' ' . $compositor->lastname);
-        parent::$page->overloadDescription($compositor->firstname . ' ' . $compositor->lastname);
+        parent::$page->overloadTitle($compositor->getFirstname() . ' ' . $compositor->getLastname());
+        parent::$page->overloadDescription($compositor->getFirstname() . ' ' . $compositor->getLastname());
         /** @todo Avoid dichotomous language distincton : Consider isoLanguageCodes */
         parent::$page->overloadVersionsByLang([
-            (parent::$page->getLang() === 'fr') ? 'en' : 'fr' => $compositor->route
+            (parent::$page->getLang() === 'fr') ? 'en' : 'fr' => $compositor->getTag()
         ]);
-        parent::$page->setH1($compositor->firstname . ' ' . $compositor->lastname);
+        parent::$page->setH1($compositor->getFirstname() . ' ' . $compositor->getLastname());
 
         $content = $this->render(
             'compositor_view.php',
             [
                 'texts' => $texts,
                 'compositor' => $compositor,
+                'previous' => $previousCompositor,
+                'next' => $nextCompositor,
                 'periods' => $periods,
                 'lang' => parent::$page->getLang(),
             ]

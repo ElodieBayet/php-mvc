@@ -13,8 +13,7 @@ class PeriodController extends AbstractController
     public function index(
         PeriodRepository $periodRepository
     ): Response {
-        /** @var Period[] $periods */
-        $periods = $periodRepository->findAllPeriodsAndDetails(parent::$page->getLang());
+        $periods = $periodRepository->findPeriodsExpanded(parent::$page->getLang());
 
         /** @var array $texts */
         $texts = $this->loadStaticTexts(parent::$page->getId() . '_' . parent::$page->getLang() . '.php');

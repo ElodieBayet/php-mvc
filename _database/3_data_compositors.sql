@@ -7,7 +7,7 @@
 USE php_mvc;
 
 -- Moyen-Âge : 1
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DE MACHAUT",
@@ -18,7 +18,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/0/0a/Machaut_1.jpg",
     "guillaume-de-machaut"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "LE GRAND",
@@ -29,7 +29,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/0/09/P%C3%A9rotin_photo.jpg",
     "perotin"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DE LA HALLE",
@@ -40,7 +40,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/e/ed/Adam_de_la_halle.jpg",
     "adam-de-la-halle"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DE VITRY",
@@ -66,7 +66,7 @@ select 1, id from `compositor` where `lastname` = "DE VITRY";
 
 
 -- Renaissance : 2
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DUFAY",
@@ -77,7 +77,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/4/4f/DufayBinchois.jpg",
     "guillaume-dufay"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "OCKEGHEM",
@@ -88,7 +88,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/2/28/Johannes_Ockeghem.png",
     "johannes-ockeghem"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DES PRÉS",
@@ -99,7 +99,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/8/8e/Josquin_des_Prez.jpg",
     "josquin-des-pres"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "GABRIELI",
@@ -110,7 +110,7 @@ VALUES (
     "/fig/default_portrait.jpg",
     "andrea-gabrieli"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "PIERLUIGI DA PALESTRINA",
@@ -121,7 +121,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/1/18/Giovanni_Pierluigi_da_Palestrina.jpg",
     "giovanni-pierluigi-da-palestrina"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DE LASSUS",
@@ -154,7 +154,7 @@ select 2, id from `compositor` where `lastname` = "DE LASSUS";
 
 
 -- Baroque : 3
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "SCARLATTI",
@@ -165,7 +165,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/b/b3/Alessandro_Scarlatti.jpg",
     "alessandro-scarlatti"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "MONTEVERDI",
@@ -176,7 +176,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/c/c2/Claudio_Monteverdi_4.jpg",
     "claudio-monteverdi"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "LULLY",
@@ -187,7 +187,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/8/85/Paul_Mignard_-_Jean-Baptiste_Lully.jpg",
     "jean-baptiste-lully"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "BACH",
@@ -198,7 +198,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/6/6a/Johann_Sebastian_Bach.jpg",
     "johann-sebastian-bach"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "HAENDEL",
@@ -209,7 +209,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/f/fa/George_Frideric_Handel_by_Balthasar_Denner.jpg",
     "georg-friedrich-haendel"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "VIVALDI",
@@ -220,7 +220,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/1/1b/Antonio_Vivaldi.jpg",
     "antonio-vivaldi"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "RAMEAU",
@@ -250,7 +250,7 @@ select 3, id from `compositor` where `lastname` = "RAMEAU";
 
 
 -- Classique : 4
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "HAYDN",
@@ -261,7 +261,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/0/05/Joseph_Haydn.jpg",
     "joseph-haydn"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "MOZART",
@@ -272,7 +272,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wolfgang-amadeus-mozart_1.jpg/1200px-Wolfgang-amadeus-mozart_1.jpg",
     "wolfgang-amadeus-mozart"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "VAN BEETHOVEN",
@@ -283,7 +283,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg",
     "ludwig-van-beethoven"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "VON WEBER",
@@ -294,7 +294,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Caroline_Bardua_-_Bildnis_des_Komponisten_Carl_Maria_von_Weber.jpg/1200px-Caroline_Bardua_-_Bildnis_des_Komponisten_Carl_Maria_von_Weber.jpg",
     "carl-maria-von-weber"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "WOLF",
@@ -305,7 +305,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/5/51/Benda%2C_Maria_Carolina.jpg",
     "maria-carolina-wolf"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "SALIERI",
@@ -316,7 +316,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Antonio_Salieri_painted_by_Joseph_Willibrord_M%C3%A4hler.jpg/1200px-Antonio_Salieri_painted_by_Joseph_Willibrord_M%C3%A4hler.jpg",
     "antonio-salieri"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "ROSSINI",
@@ -327,7 +327,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Composer_Rossini_G_1865_by_Carjat_-_Restoration.jpg/1200px-Composer_Rossini_G_1865_by_Carjat_-_Restoration.jpg",
     "gioachino-rossini"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DE MONTGEROULT",
@@ -338,7 +338,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/1/13/Portrait_de_la_m%C3%A8re_de_His_de_la_Salle%2C_Madame_H%C3%A9l%C3%A8ne_de_Montgeroult_-_par_COSWAY_Richard.jpg",
     "helene-de-montgeroult"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "FARRENC",
@@ -379,7 +379,7 @@ select 5, id from `compositor` where `lastname` = "ROSSINI";
 
 
 -- Romantique : 5
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "BERLIOZ",
@@ -390,7 +390,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/a/aa/Hector_Berlioz_fusain.JPG",
     "hector-berlioz"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "MENDELSSOHN",
@@ -401,7 +401,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Felix_Mendelssohn_Bartholdy.jpg/1200px-Felix_Mendelssohn_Bartholdy.jpg",
     "felix-mendelssohn"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "SCHUBERT",
@@ -412,7 +412,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/0/0d/Franz_Schubert_by_Wilhelm_August_Rieder_1875.jpg",
     "franz-schubert"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "CHOPIN",
@@ -423,7 +423,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Chopin%2C_by_Wodzinska.JPG/1200px-Chopin%2C_by_Wodzinska.JPG",
     "frederic-chopin"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "SCHUMANN",
@@ -434,7 +434,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Robert_Schumann_1839.jpg/1200px-Robert_Schumann_1839.jpg",
     "robert-schumann"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "SCHUMANN-WIECK",
@@ -445,7 +445,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/f/f3/Clara-CC.jpg",
     "clara-schumann-wieck"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "LISZT",
@@ -456,7 +456,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/f/ff/Liszt_1858.jpg",
     "franz-liszt"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "WAGNER",
@@ -467,7 +467,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/RichardWagner.jpg/1200px-RichardWagner.jpg",
     "richard-wagner"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "VERDI",
@@ -478,7 +478,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/7/7c/Verdi-photo-Brogi.jpg",
     "giuseppe-verdi"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "BRAHMS",
@@ -489,7 +489,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/1/15/JohannesBrahms.jpg",
     "johannes-brahms"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "TCHAÏKOVSKI",
@@ -500,7 +500,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/0/02/Tchaikowsky.jpg",
     "piotr-ilitch-tchaikovski"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "BONIS",
@@ -511,7 +511,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/0/07/Mel_Bonis_1.jpg",
     "melanie-helene-bonis"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "MENDELSSOHN",
@@ -522,7 +522,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/0/0b/Fannymendelssohn-improved.jpg",
     "fanny-mendelssohn"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "SAINT-SAËNS",
@@ -533,7 +533,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Saintsaens.jpg/1200px-Saintsaens.jpg",
     "camille-saint-saens"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "BRUCH",
@@ -581,7 +581,7 @@ select 5, id from `compositor` where `lastname` = "BRUCH";
 
 
 -- Moderne : 6
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "STRAUSS",
@@ -592,7 +592,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/2/2d/Strauss3.jpg",
     "richard-strauss"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "MAHLER",
@@ -603,7 +603,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/6/61/Mahler_Gustav_von_Sz%C3%A9kely.png",
     "gustav-mahler"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "GERSHWIN",
@@ -614,7 +614,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/6/68/George_Gershwin_1937.jpg",
     "george-gershwin"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "SIBELIUS",
@@ -625,7 +625,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jean_Sibelius%2C_1913.jpg/1200px-Jean_Sibelius%2C_1913.jpg",
     "jean-sibelius"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DEBUSSY",
@@ -636,7 +636,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/f/f9/Claude_Debussy_ca_1908%2C_foto_av_F%C3%A9lix_Nadar.jpg",
     "claude-debussy"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "DUKAS",
@@ -647,7 +647,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/2/2a/Paul_Dukas_01.jpg",
     "paul-dukas"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "RAVEL",
@@ -658,7 +658,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/7/78/Maurice_Ravel_1925.jpg",
     "maurice-ravel"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "RESPIGHI",
@@ -669,7 +669,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/c/cc/Respighi_1935.jpg",
     "ottorino-respighi"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "RACHMANINOV",
@@ -680,7 +680,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sergei_Rachmaninoff_LOC_30160_cropped.jpg/1200px-Sergei_Rachmaninoff_LOC_30160_cropped.jpg",
     "serguei-rachmaninov"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "STRAVINSKY",
@@ -691,7 +691,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/c/cc/Igor_Stravinsky_Essays.jpg",
     "igor-stravinsky"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "PROKOFIEV",
@@ -702,7 +702,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Sergei_Prokofiev_circa_1918_over_Chair_Bain.jpg/1200px-Sergei_Prokofiev_circa_1918_over_Chair_Bain.jpg",
     "serguei-prokofiev"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "CHOSTAKOVITCH",
@@ -713,7 +713,7 @@ VALUES (
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Dmitri_Shostakovich_credit_Deutsche_Fotothek_adjusted.jpg/1200px-Dmitri_Shostakovich_credit_Deutsche_Fotothek_adjusted.jpg",
     "dmitri-chostakovitch"
 );
-INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `route`)
+INSERT INTO `compositor` (`id`, `lastname`, `firstname`, `birth`, `death`, `origin`, `figure`, `tag`)
 VALUES (
     NULL,
     "TAILLEFERRE",

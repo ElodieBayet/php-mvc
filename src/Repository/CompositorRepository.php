@@ -28,8 +28,8 @@ class CompositorRepository extends EntityRepository
             compositor.firstname,
             compositor.birth,
             compositor.death,
-            compositor.route,
-            GROUP_CONCAT(period_compositor.period_id) AS periods
+            compositor.tag,
+            GROUP_CONCAT(period_compositor.period_id SEPARATOR ", ") AS periodIds
             FROM compositor
             INNER JOIN period_compositor ON period_compositor.compositor_id = compositor.id
             GROUP BY compositor.id
@@ -65,26 +65,24 @@ class CompositorRepository extends EntityRepository
     /**
      * @return Compositor
      */
-    public function findCompositorByRoute(string $route): null|Compositor
+    public function findCompositorByTag(string $tag): null|Compositor
     {
         $data = null;
 
-        $query = 'SELECT * FROM compositor WHERE compositor.route = :route';
+        $query = 'SELECT * FROM compositor WHERE compositor.tag = :tag';
 
-        $data = $this->queryFetch($query, Compositor::class, ['route' => $route]);
+        $data = $this->queryFetch($query, Compositor::class, ['tag' => $tag]);
 
         return $data;
     }
 
     /**
-     * Select previous or next sibling of current cmpositor
+     * Select previous or next sibling compositor
      *
-     * @param string $currentDate Date of current Compositor
+     * @param string $currentDate Reference date of birth
      * @param string $target Clause selector for older or younger
-     *
-     * @return null|Compositor
      */
-    public function findSibling(string $currentDate, string $target): null|Compositor
+    public function findSiblingByBirthDate(string $date, string $target): null|Compositor
     {
         $data = null;
 
@@ -94,13 +92,13 @@ class CompositorRepository extends EntityRepository
         $query = 'SELECT
             compositor.id,
             compositor.lastname,
-            compositor.route
+            compositor.tag
             FROM compositor
-            WHERE compositor.birth ' . $target . ' :currentDate
+            WHERE compositor.birth ' . $target . ' :date
             ORDER BY compositor.birth '. $orderMode .'
             LIMIT 1';
 
-        $data = $this->queryFetch($query, Compositor::class, ['currentDate' => $currentDate]);
+        $data = $this->queryFetch($query, Compositor::class, ['date' => $date]);
 
         return ($data)? $data : null;
     }

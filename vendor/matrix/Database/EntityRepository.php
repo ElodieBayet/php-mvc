@@ -68,7 +68,7 @@ class EntityRepository extends AbstractDatabase
                 $query = self::$pdo->prepare($sql);
                 $query->execute($params);
             }
-            $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, $entity);
+            $query->setFetchMode(\PDO::FETCH_CLASS, $entity);
             $collection = $query->fetchAll();
             $query->closeCursor();
         } catch (\PDOException $queryError) {

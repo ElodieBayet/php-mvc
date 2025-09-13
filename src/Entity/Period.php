@@ -17,7 +17,7 @@ class Period extends AbstractEntity
 
     // Joined translation
 
-    public string $route;
+    public string $tag;
 
     public string $name;
 
@@ -26,12 +26,56 @@ class Period extends AbstractEntity
     // Joined entities
     
     /** @var Compositors[] */
-    public $compositors;
+    public array $compositors = [];
 
     // Dynamic properties
 
-    /** @var int */
-    public $totalCompositors;
+    public null|int $countCompositors;
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getBegin(): int
+    {
+        return $this->begin;
+    }
+
+    public function getEnd(): null|int
+    {
+        return $this->end;
+    }
+
+    public function getTag(): string
+    {
+        return $this->tag;
+    }
+
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    public function countCompositors(): int
+    {
+        return $this->countCompositors ?? 0;
+    }
+
+    /**
+     * @return Compositor[]
+     */
+    public function getCompositors(): array
+    {
+        return $this->compositors;
+    }
+
+    public function setCompositors(array $compositors): self
+    {
+        $this->compositors = $compositors;
+
+        return $this;
+    }
 
     public function getDuration(): int
     {

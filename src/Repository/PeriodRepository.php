@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Repository;
 
+use App\Entity\Compositor;
 use Matrix\Database\EntityRepository;
 use App\Entity\Period;
 
@@ -21,7 +22,7 @@ class PeriodRepository extends EntityRepository
             period.id,
             period.begin,
             period.end,
-            ' . $tableVersion . '.route,
+            ' . $tableVersion . '.tag,
             ' . $tableVersion . '.name
             FROM period
             INNER JOIN ' . $tableVersion . ' ON ' . $tableVersion . '.period_id = period.id
@@ -35,7 +36,7 @@ class PeriodRepository extends EntityRepository
     /**
      * @return Period[]
      */
-    public function findAllPeriodsAndDetails(string $lang): array
+    public function findPeriodsExpanded(string $lang): array
     {
         $tableVersion = $lang . '_period';
         $data = [];
@@ -44,10 +45,10 @@ class PeriodRepository extends EntityRepository
             period.id,
             period.begin,
             period.end,
-            ' . $tableVersion . '.route,
+            ' . $tableVersion . '.tag,
             ' . $tableVersion . '.name,
             ' . $tableVersion . '.description,
-            count(period_compositor.compositor_id) AS totalCompositors
+            count(period_compositor.compositor_id) AS countCompositors
             FROM period
             INNER JOIN ' . $tableVersion . ' ON ' . $tableVersion . '.period_id = period.id
             LEFT JOIN period_compositor on period_compositor.period_id = period.id
@@ -62,7 +63,7 @@ class PeriodRepository extends EntityRepository
     /**
      * @return Period[]
      */
-    public function findAllPeriodsByCompositor(int $compositor, string $lang): array
+    public function findPeriodsByCompositor(Compositor $compositor, string $lang): array
     {
         $tableVersion = $lang.'_period';
         $data = [];
@@ -77,15 +78,12 @@ class PeriodRepository extends EntityRepository
             INNER JOIN period_compositor ON period_compositor.period_id = period.id
             WHERE period_compositor.compositor_id = :id';
         
-        $data = $this->queryFetchAll($query, Period::class, ['id' => $compositor]);
+        $data = $this->queryFetchAll($query, Period::class, ['id' => $compositor->getId()]);
 
         return $data;
     }
 
-    /**
-     * @return null|Period
-     */
-    public function findPeriodByRoute(string $route, string $lang): null|Period
+    public function findPeriodByTag(string $tag, string $lang): null|Period
     {
         $tableVersion = $lang.'_period';
         /** @todo Avoid dichotomous language distincton : Consider isoLanguageCodes */
@@ -95,21 +93,17 @@ class PeriodRepository extends EntityRepository
             period.id,
             period.begin,
             period.end,
-            ' . $tableVersion . '.route,
+            ' . $tableVersion . '.tag,
             ' . $tableVersion . '.name,
             ' . $tableVersion . '.description,
-            ' . $langAlt . '_period.route AS langAlt
+            ' . $langAlt . '_period.tag AS langAlt
             FROM period
             INNER JOIN ' . $tableVersion . ' ON ' . $tableVersion . '.period_id = period.id
             INNER JOIN ' . $langAlt . '_period ON ' . $langAlt . '_period.period_id = period.id
-            WHERE ' . $tableVersion . '.route = :route';
+            WHERE ' . $tableVersion . '.tag = :tag';
         
-        $data = $this->queryFetch($query, Period::class, ['route' => $route]);
+        $data = $this->queryFetch($query, Period::class, ['tag' => $tag]);
 
-        if ($data instanceof Period) {
-            return $data;
-        }
-
-        return null;
+        return $data;
     }
 }

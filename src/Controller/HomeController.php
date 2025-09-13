@@ -17,7 +17,9 @@ class HomeController extends AbstractController
     ): Response {
         $periods = $periodRepository->findAllPeriods(parent::$page->getLang());
         foreach ($periods as $period) {
-            $period->compositors = $compositorRepository->findCompositorsByPeriod($period->id);
+            $period->setCompositors(
+                $compositorRepository->findCompositorsByPeriod($period->getId())
+            );
         }
 
         /** @var array $texts */
