@@ -43,11 +43,12 @@ class CompositorController extends AbstractController
         string $slug
     ): Response {
         $compositor = $compositorRepository->findCompositorByTag($slug);
-        $periods = $periodRepository->findPeriodsByCompositor($compositor, parent::$page->getLang());
 
         if (null === $compositor) {
-            throw new HttpErrorException("No compositor found for route '$slug'", HttpErrorException::HTTP_NOT_FOUND);
+            throw new HttpErrorException("No compositor found for route '$slug'", Response::HTTP_NOT_FOUND);
         }
+
+        $periods = $periodRepository->findPeriodsByCompositor($compositor, parent::$page->getLang());
 
         $previousCompositor = $compositorRepository->findSiblingByBirthDate(
             $compositor->getBirth(),

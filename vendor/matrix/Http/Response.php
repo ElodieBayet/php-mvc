@@ -10,12 +10,14 @@ class Response
     public const HTTP_BAD_REQUEST = 400;
     public const HTTP_FORBIDDEN = 403;
     public const HTTP_NOT_FOUND = 404;
+    public const HTTP_INTERNAL = 500;
 
     private static $statusTexts = [
         200 => "OK",
         400 => "Bad Request",
         403 => "Forbidden",
         404 => "Not Found",
+        500 => "Internal Error",
     ];
 
     private static $defaultHeaders = [

@@ -12,18 +12,18 @@ class Page
     public const HTTP_ERROR_ID = 'http-error';
 
     /** Identificate the version by ISO language code */
-    private static string $lang;
+    private static string $lang = '';
 
-    private static null|string $id;
+    private static null|string $id = null;
 
     /** SEO readable title */
-    private static string $title;
+    private static string $title = '';
 
     /** SEO description of content */
-    private static string $description;
+    private static string $description = '';
 
     /** Image URI for sharing (optional) */
-    private static null|string $ads;
+    private static null|string $ads = null;
 
     /** @var Route[] $mains Routes for main navigation */
     private static $mains = [];
@@ -32,13 +32,13 @@ class Page
     private static $seconds = [];
 
     /** Name section */
-    private static null|string $section;
+    private static null|string $section = null;
 
     /** @var Language[] $versions Contains other versions of current page */
     private static $versions = [];
 
     /** $title returned by default */
-    private static null|string $h1;
+    private static null|string $h1 = null;
 
     public function __construct(string $lang)
     {

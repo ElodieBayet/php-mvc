@@ -42,7 +42,7 @@ class EntityRepository extends AbstractDatabase
             }
         }
 
-        return $tuple;
+        return false === $tuple ? null : $tuple;
     }
 
     /**
@@ -111,6 +111,6 @@ class EntityRepository extends AbstractDatabase
             }
         }
 
-        return $result;
+        return false === $result ? null : $result;
     }
 }

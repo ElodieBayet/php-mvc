@@ -26,7 +26,7 @@ class Language
 
     public function getIsoCode(): string
     {
-        return $this->isoCode?: '';
+        return $this->isoCode ?: '';
     }
 
     public function getLabel(): string

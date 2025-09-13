@@ -6,21 +6,18 @@ namespace Matrix\Foundation;
 
 class HttpErrorException extends \Exception
 {
-    public const HTTP_BAD_REQUEST = 'bad_bequest';
-    public const HTTP_NOT_FOUND = 'not_found';
+    private int $httpCode;
 
-    private string $httpType;
-
-    public function __construct(string $message, string $httpType, $code = 0)
+    public function __construct(string $message, int $httpCode, $code = 0)
     {
         $this->message = $message;
-        $this->httpType = $httpType;
+        $this->httpCode = $httpCode;
 
         parent::__construct($message, $code);
     }
 
-    public function getHttpType(): string
+    public function getHttpCode(): int
     {
-        return $this->httpType;
+        return $this->httpCode;
     }
 }

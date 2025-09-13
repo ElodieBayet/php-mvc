@@ -5,16 +5,17 @@ declare(strict_types=1);
 namespace Matrix\Controller;
 
 use Matrix\Controller\AbstractController;
+use Matrix\Foundation\HttpErrorException;
 use Matrix\Http\Response;
 
 class HttpErrorController extends AbstractController
 {
-    public function index(string $httpErrorName): Response
+    public function index(HttpErrorException $httpErrorException): Response
     {
         /** @var array $texts */
         $texts = $this->loadStaticTexts(parent::$page->getId() . '_' . parent::$page->getLang() . '.php');
 
-        $errorKey = implode(explode('-', $httpErrorName));
+        $errorKey = (string) $httpErrorException->getHttpCode();
 
         if (true === array_key_exists($errorKey, $texts)) {
             $texts = $texts[$errorKey];
@@ -29,6 +30,6 @@ class HttpErrorController extends AbstractController
 
         $content = $this->render('http_error.php', ['texts' => $texts]);
 
-        return new Response($content, Response::{'HTTP_' . strtoupper($httpErrorName)});
+        return new Response($content, $httpErrorException->getHttpCode());
     }
 }

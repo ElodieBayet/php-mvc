@@ -51,7 +51,7 @@ final class HttpCore extends AbstractCore
                 echo "<pre>HttpCore ::<br>" . $httpException->getMessage() . "</pre>";
                 exit;
             }
-            $response = AbstractResolver::httpErrorResponse($page, $httpException->getHttpType());
+            $response = AbstractResolver::httpErrorResponse($page, $httpException);
         } catch (\Exception $exception) {
             // Unexpected errors
             if ($this->isDebugging()) {
