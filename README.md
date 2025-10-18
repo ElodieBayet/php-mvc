@@ -1,6 +1,6 @@
 # **PHP & MVC**
 
-Version | Objectif | Domaine | Cours | Démo
+Version | Objectif | Domaine | Cadre | Démo
 ------- | -------- | ------- | ----- | ----
 2.1 | Andragogie | Programmation | Laboratoire | [PHP & MVC](https://demo.elodiebayet.com/php-mvc)
 
@@ -26,7 +26,7 @@ Ce support était fourni aux stagiaires ayant accompli le cours "Laboratoire PHP
 ### Prérequis
 
 Cours 
-1. "Informatique général"
+1. "Informatique"
 1. "Algorithmique"
 1. "HTML/CSS"
 1. "Programmation PHP"
@@ -55,26 +55,16 @@ Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs e
 
 ### Base de données
 
-#### Schéma entités-associations
+#### 1️⃣ Schéma entités-associations
 
 <img src="https://demo.elodiebayet.com/php-mvc/assets/img/schema_entites-associations.jpg" width="431" height="339">
 
-#### Schéma relationel
+#### 2️⃣ Schéma relationnel
 
-![Schéma relationel](https://demo.elodiebayet.com/php-mvc/assets/img/schema_relationel.jpg)
+![Schéma relationnel](https://demo.elodiebayet.com/php-mvc/assets/img/schema_relationnel.jpg)
 
 
-### Développement
-
-#### Classes
-
-(en cours de rédaction)
-
-#### État
-
-(en cours de rédaction)
-
-#### Composants
+###  Diagrammes logiciel
 
 (en cours de rédaction)
 
@@ -95,7 +85,7 @@ Clônez ce _repository_ dans un répertoire local sur votre machine.
 
 ### Configuration
 
-#### Virtual Host
+#### 1️⃣ Virtual Host
 
 Fichier **httpd-vhosts.conf**
 ```
@@ -117,22 +107,22 @@ Fichier **host**
 ```
 
 
-#### Base de données
+#### 2️⃣ Base de données
 
 Le dossier `_database/` contient les fichiers SQL nécessaires à l'implémentation de la base de données.
 
-- `1_schema.sql` définit la structure (DDL). Il doit être exécuté en premier.
-- `2_data_periods.sql` implémente la table `period` et ses sous-entités languistiques (DML). C'est l'entité forte, donc il doit être exécuté en deuxième.
-- `3_data_compositor.sql` implémente la table `compositor` (DML). C'est l'entité faible, donc il doit être exécuté après le DML précédent.
+1. `1_schema.sql` définit la structure (DDL). Il doit être exécuté en premier.
+1. `2_data_periods.sql` implémente la table `period` et ses sous-entités languistiques (DML). C'est l'entité forte, donc il doit être exécuté en deuxième.
+1. `3_data_compositor.sql` implémente la table `compositor` (DML). C'est l'entité faible, donc il doit être exécuté après le DML précédent.
 
 
-#### Variables d'environnement
+#### 3️⃣ Variables d'environnement
 
 Dupliquez le fichier `env.template.php` et renommez-le en `env.local.php`. Adaptez les constantes avec des propriétés adéquantes pour votre utilisation locale – en particulier les valeurs de connexion la base de données.
 
 Si vous déployez ce projet en ligne, dupliquez une nouvelle fois le fichier `env.template.php` et renommez-le en `env.php`. Adaptez cette fois les constantes avec des propriétés adaptées pour l'environnement de production. C'est cette version `en.php` doit être déployée sur votre serveur distant. 
 
-**Attention** : ne divulguez jamais vos variables d'environnement publiquement.
+⚠️ **Attention** : ne divulguez jamais vos variables d'environnement publiquement.
 
 
 ---
