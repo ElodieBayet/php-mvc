@@ -14,37 +14,37 @@
             <h3><?= $this['texts']['project']['blocks'][1]['h3'] ?></h3>
             <div class="grid sm">
                 <div class="col-33 badge">
-                    <div class="icon"><img src="https://www.elodiebayet.com/store/icons/icon_php.svg" alt=""></div>
+                    <div class="icon"><img src="https://www.elodiebayet.com/assets/icons/icon_php.svg" alt=""></div>
                     <div class="title">
                         <p>PHP</p>
                     </div>
                 </div>
                 <div class="col-33 badge">
-                    <div class="icon"><img src="https://www.elodiebayet.com/store/icons/icon_mysql.svg" alt=""></div>
+                    <div class="icon"><img src="https://www.elodiebayet.com/assets/icons/icon_mysql.svg" alt=""></div>
                     <div class="title">
                         <p>MySQL</p>
                     </div>
                 </div>
                 <div class="col-33 badge">
-                    <div class="icon"><img src="https://www.elodiebayet.com/store/icons/icon_sql.svg" alt=""></div>
+                    <div class="icon"><img src="https://www.elodiebayet.com/assets/icons/icon_sql.svg" alt=""></div>
                     <div class="title">
                         <p>SQL</p>
                     </div>
                 </div>
                 <div class="col-33 badge">
-                    <div class="icon"><img src="https://www.elodiebayet.com/store/icons/icon_js.svg" alt=""></div>
+                    <div class="icon"><img src="https://www.elodiebayet.com/assets/icons/icon_js.svg" alt=""></div>
                     <div class="title">
                         <p>JavaScript</p>
                     </div>
                 </div>
                 <div class="col-33 badge">
-                    <div class="icon"><img src="https://www.elodiebayet.com/store/icons/icon_html.svg" alt=""></div>
+                    <div class="icon"><img src="https://www.elodiebayet.com/assets/icons/icon_html.svg" alt=""></div>
                     <div class="title">
                         <p>HTML 5</p>
                     </div>
                 </div>
                 <div class="col-33 badge">
-                    <div class="icon"><img src="https://www.elodiebayet.com/store/icons/icon_git.svg" alt=""></div>
+                    <div class="icon"><img src="https://www.elodiebayet.com/assets/icons/icon_git.svg" alt=""></div>
                     <div class="title">
                         <p>Git</p>
                     </div>
