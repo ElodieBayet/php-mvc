@@ -43,7 +43,7 @@ Ce projet peut être utilisé dans un cadre d'apprentissage individuel et privé
 ---
 
 
-## Analyse
+## Analyse et conception
 
 Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs et la base de données sont conçues en conséquence.
 
@@ -51,6 +51,21 @@ Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs e
 ### Sitemap
 
 ![Architecture SEO](https://demo.elodiebayet.com/php-mvc/assets/img/architecture_seo.jpg)
+
+
+### Logiciel
+
+#### 1️⃣ Diagramme de séquence
+
+![Diagramme séquence](./assets/img/diagramme_sequence.png)
+
+#### 2️⃣ Diagramme de communication
+
+![Diagramme communication](./assets/img/diagramme_communication.png)
+
+#### 3️⃣ Diagramme de classes
+
+![Diagramme classes](./assets/img/diagramme_classes.png)
 
 
 ### Base de données
@@ -62,11 +77,6 @@ Le projet gère 2 versions linguistiques : le français et l'anglais. Les URIs e
 #### 2️⃣ Schéma relationnel
 
 ![Schéma relationnel](https://demo.elodiebayet.com/php-mvc/assets/img/schema_relationnel.jpg)
-
-
-###  Diagrammes logiciel
-
-(en cours de rédaction)
 
 
 ---
