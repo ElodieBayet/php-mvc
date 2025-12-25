@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Matrix\Controller\AbstractController;
+use Matrix\Foundation\Route;
 use Matrix\Http\Response;
 
 class DesignController extends AbstractController
 {
+    #[Route(path: [
+        'fr' => '/conception',
+        'en' => '/design',
+    ], methods: ['GET'], name: 'design_index')]
     public function index(): Response
     {
         /** @var array $texts */

@@ -24,7 +24,7 @@ final class HttpCore extends AbstractCore
         $page = new Page($request->getLocale());
 
         // Implement Page
-        AbstractFactory::pageRoutes($page, $request, parent::$appSitemap);
+        AbstractFactory::pageNavigations($page, $request, parent::$appSitemap);
         AbstractFactory::pageIdentity($page, $request);
         AbstractFactory::pageVersions($page, parent::$appLanguages, parent::$appSitemap);
         AbstractFactory::pageMeta($page, parent::$appSitemap);
@@ -34,17 +34,17 @@ final class HttpCore extends AbstractCore
 
     public function resolve(Request $request, Page $page): Response
     {
-        /** @var Controller $controller */
-        $controller;
+        /** @var null|Controller $controller */
+        $controller = null;
 
-        /** @var Response $response */
-        $response;
+        /** @var null|Response $response */
+        $response = null;
 
         try {
             $controller = AbstractResolver::controller($request, $page);
             $method = AbstractResolver::method($request, $controller);
-            $arguments = AbstractResolver::arguments($request, $controller, $method);
-            $response = $controller->$method(...$arguments);
+            $arguments = AbstractResolver::arguments($request, $method);
+            $response = $method->invoke($controller, ...$arguments);
         } catch (HttpErrorException $httpException) {
             // Errors threw from resolver or controllers
             if ($this->isDebugging()) {

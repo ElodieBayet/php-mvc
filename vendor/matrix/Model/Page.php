@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Matrix\Model;
 
 use Matrix\Model\Language;
-use Matrix\Model\Route;
+use Matrix\Model\Navigation;
 
 class Page
 {
@@ -25,10 +25,10 @@ class Page
     /** Image URI for sharing (optional) */
     private static null|string $ads = null;
 
-    /** @var Route[] $mains Routes for main navigation */
+    /** @var Navigation[] $mains Navigation for main navigation */
     private static $mains = [];
 
-    /** @var Route[] $seconds Routes for secondary navigation */
+    /** @var Navigation[] $seconds Navigation for secondary navigation */
     private static $seconds = [];
 
     /** Name section */
@@ -106,34 +106,34 @@ class Page
     }
 
     /**
-     * @return Route[]
+     * @return Navigation[]
      */
     public function getMains(): array
     {
         return self::$mains;
     }
 
-    public function addMains(Route $route): Page
+    public function addMains(Navigation $navigation): Page
     {
-        if (!in_array($route, self::$mains)) {
-            self::$mains[] = $route;
+        if (!in_array($navigation, self::$mains)) {
+            self::$mains[] = $navigation;
         }
 
         return $this;
     }
 
     /**
-     * @return Route[]
+     * @return Navigation[]
      */
     public function getSeconds(): array
     {
         return self::$seconds;
     }
 
-    public function addSeconds(Route $route): Page
+    public function addSeconds(Navigation $navigation): Page
     {
-        if (!in_array($route, self::$seconds)) {
-            self::$seconds[] = $route;
+        if (!in_array($navigation, self::$seconds)) {
+            self::$seconds[] = $navigation;
         }
 
         return $this;
@@ -214,7 +214,7 @@ class Page
 
         foreach (self::$versions as $version) {
             if (true === in_array($version->getIsoCode(), $keys)) {
-                $version->getRoute()->addSlug($versions[$version->getIsoCode()]);
+                $version->getNavigation()->addPath($versions[$version->getIsoCode()]);
             }
         }
     }

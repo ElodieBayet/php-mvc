@@ -5,12 +5,17 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Matrix\Controller\AbstractController;
+use Matrix\Foundation\Route;
 use Matrix\Http\Response;
 use App\Repository\CompositorRepository;
 use App\Repository\PeriodRepository;
 
 class HomeController extends AbstractController
 {
+    #[Route(path: [
+        'fr' => '/',
+        'en' => '/',
+    ], methods: ['GET'], name: 'home_index')]
     public function index(
         PeriodRepository $periodRepository,
         CompositorRepository $compositorRepository,

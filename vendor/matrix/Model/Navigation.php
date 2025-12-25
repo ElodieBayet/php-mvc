@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace Matrix\Model;
 
-class Route
+class Navigation
 {
     /** Unique identifier. Equals Page id */
     private string $code;
 
-    private string $slug;
+    private string $path;
 
     private string $label;
 
-    public function __construct(string $code, string $slug, string $label)
+    public function __construct(string $code, string $path, string $label)
     {
         $this->code = $code;
-        $this->slug = $slug;
+        $this->path = $path;
         $this->label = $label;
     }
 
@@ -25,14 +25,14 @@ class Route
         return $this->code;
     }
 
-    public function getSlug(): string
+    public function getPath(): string
     {
-        return $this->slug;
+        return $this->path;
     }
 
-    public function addSlug(string $slug): Route
+    public function addPath(string $path): Navigation
     {
-        $this->slug = $this->slug . '/' . $slug;
+        $this->path = $this->path . '/' . $path;
 
         return $this;
     }

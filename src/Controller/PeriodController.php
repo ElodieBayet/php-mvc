@@ -5,11 +5,16 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Matrix\Controller\AbstractController;
+use Matrix\Foundation\Route;
 use Matrix\Http\Response;
 use App\Repository\PeriodRepository;
 
 class PeriodController extends AbstractController
 {
+    #[Route(path: [
+        'fr' => '/periodes',
+        'en' => '/periods'
+    ], methods: ['GET'], name: 'periods_index')]
     public function index(
         PeriodRepository $periodRepository
     ): Response {

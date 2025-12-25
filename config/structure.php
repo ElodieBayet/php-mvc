@@ -9,36 +9,36 @@ return [
     'mains' => [
         'home' => [
             'fr' => [
-                'route' => '/',
+                'path' => '/',
                 'label' => 'Accueil',
                 'description' => "Présente les principales périodes de la musique savante sous forme d'infographie interactive",
             ],
             'en' => [
-                'route' => '/',
+                'path' => '/',
                 'label' => 'Home',
                 'description' => "Presents the main periods of classical music in the form of interactive infographics",
             ],
         ],
         'period' => [
             'fr' => [
-                'route' => '/periodes',
+                'path' => '/periodes',
                 'label' => 'Périodes',
                 'description' => "Explique brièvement les principales périodes de la musique savante",
             ],
             'en' => [
-                'route' => '/periods',
+                'path' => '/periods',
                 'label' => 'Periods',
                 'description' => "Briefly explains the main periods of classical music",
             ],
         ],
         'compositor' => [
             'fr' => [
-                'route' => '/compositeurs', 
+                'path' => '/compositeurs', 
                 'label' => 'Compositeurs',
                 'description' => "Répertorie les principaux compositeurs pour chaque période de la musique savante",
             ],
             'en' => [
-                'route' => '/compositors',
+                'path' => '/compositors',
                 'label' => 'Compositors',
                 'description' => "Lists the main composers for each period of classical music",
             ],
@@ -48,24 +48,24 @@ return [
     'seconds' => [
         'about' => [
             'fr' => [
-                'route' => '/a-propos', 
+                'path' => '/a-propos', 
                 'label' => 'À propos',
                 'description' => "Présente le projet et ses objectifs",
             ],
             'en' => [
-                'route' => '/about',
+                'path' => '/about',
                 'label' => 'About',
                 'description' => "Presents the project and its objectives",
             ],
         ],
         'design' => [
             'fr' => [
-                'route' => '/conception',
+                'path' => '/conception',
                 'label' => 'Conception',
                 'description' => "Présente le concept employé pour le développement du projet",
             ],
             'en' => [
-                'route' => '/design',
+                'path' => '/design',
                 'label' => 'Design',
                 'description' => "Presents the concept used for the development of the project",
             ],

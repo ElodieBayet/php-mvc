@@ -2,7 +2,7 @@
 
 Version | Objectif | Domaine | Cadre | Démo
 ------- | -------- | ------- | ----- | ----
-2.1 | Andragogie | Programmation | Laboratoire | [PHP & MVC](https://demo.elodiebayet.com/php-mvc)
+2.2 | Andragogie | Programmation | Laboratoire | [PHP & MVC](https://demo.elodiebayet.com/php-mvc)
 
 Reupload et correction du support 'PHP & MVC' daté d'octobre 2019.
 

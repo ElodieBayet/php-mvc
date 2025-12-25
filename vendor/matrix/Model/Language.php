@@ -9,19 +9,20 @@ class Language
     /** International normalized code */
     private string $isoCode;
 
-    /** Short name */
+    /** Short name. Ex. : 'FRA' */
     private string $label;
 
+    /** Fullname. Ex. : Français */
     private string $title;
 
-    private Route $route;
+    private Navigation $navigation;
 
-    public function __construct(string $isoCode, string $label, string $title, Route $route)
+    public function __construct(string $isoCode, string $label, string $title, Navigation $navigation)
     {
         $this->isoCode = $isoCode;
         $this->label = $label;
         $this->title = $title;
-        $this->route = $route;
+        $this->navigation = $navigation;
     }
 
     public function getIsoCode(): string
@@ -39,8 +40,8 @@ class Language
         return $this->title ?: '';
     }
 
-    public function getRoute(): Route
+    public function getNavigation(): Navigation
     {
-        return $this->route;
+        return $this->navigation;
     }
 }

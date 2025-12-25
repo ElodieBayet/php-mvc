@@ -7,14 +7,14 @@ namespace Matrix\Foundation;
 use Matrix\Http\Request;
 use Matrix\Model\Language;
 use Matrix\Model\Page;
-use Matrix\Model\Route;
+use Matrix\Model\Navigation;
 
 abstract class AbstractFactory
 {
     private static function getIdByRoute(array $routes, string $path): null|string
     {
         foreach ($routes as $route) {
-            if ($route->getSlug() === '/' . $path) {
+            if ($route->getPath() === '/' . $path) {
                 return $route->getCode();
             }
         }
@@ -25,21 +25,21 @@ abstract class AbstractFactory
     /**
      * Build Main and Second navigations for current language
      */
-    public static function pageRoutes(Page $page, Request $request, array $appSitemap): void
+    public static function pageNavigations(Page $page, Request $request, array $appSitemap): void
     {
         foreach ($appSitemap as $section => $routes) {
-            foreach ($routes as $id => $routeSet) {
+            foreach ($routes as $id => $route) {
                 /** @todo Avoid blind deduction of keys 'route' and 'label' : Consider AbstractCore resolution of app structure */
                 $add = 'add' . ucfirst($section);
                 if (method_exists($page, $add)) {
-                    $route = new Route(
+                    $navigation = new Navigation(
                         code: $id,
-                        slug: $routeSet[$request->getLocale()]['route'],
-                        label: $routeSet[$request->getLocale()]['label']
+                        path: $route[$request->getLocale()]['path'],
+                        label: $route[$request->getLocale()]['label']
                     );
-                    $page->$add($route);
+                    $page->$add($navigation);
                 }
-                if ($routeSet[$request->getLocale()]['route'] === '/' . $request->getPath()[0]) {
+                if ($route[$request->getLocale()]['path'] === '/' . $request->getPath()[0]) {
                     $page->setSection($section);
                 }
             }
@@ -82,9 +82,9 @@ abstract class AbstractFactory
                         isoCode: $isoCode,
                         label: substr($appLanguages[$isoCode]['label'], 0, 3),
                         title: $appLanguages[$isoCode]['label'],
-                        route: new Route(
+                        navigation: new Navigation(
                             code: $id,
-                            slug: $version['route'],
+                            path: $version['path'],
                             label: $version['label']
                         )
                     );

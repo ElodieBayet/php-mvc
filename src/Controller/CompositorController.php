@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use Matrix\Controller\AbstractController;
 use Matrix\Foundation\HttpErrorException;
+use Matrix\Foundation\Route;
 use Matrix\Http\Request;
 use Matrix\Http\Response;
 use App\Repository\CompositorRepository;
@@ -13,6 +14,10 @@ use App\Repository\PeriodRepository;
 
 class CompositorController extends AbstractController
 {
+    #[Route(path: [
+        'fr' => '/compositeurs',
+        'en' => '/compositors',
+    ], methods: ['GET'], name: 'compositors_index')]
     public function index(
         Request $request,
         CompositorRepository $compositorRepository,
@@ -37,6 +42,10 @@ class CompositorController extends AbstractController
         return new Response($content);
     }
 
+    #[Route(path: [
+        'fr' => '/compositeurs/{slug}',
+        'en' => '/compositors/{slug}',
+    ], methods: ['GET'], validation: '[A-Za-z0-9\-]+', name: 'compositor_view')]
     public function view(
         CompositorRepository $compositorRepository,
         PeriodRepository $periodRepository,

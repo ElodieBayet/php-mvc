@@ -1,25 +1,29 @@
+<?php
+/** @var Page $page */
+$page = $this['page'];
+?>
 <!DOCTYPE html>
-<html lang="<?= $this['page']->getLang() ?>" class="nojs">
+<html lang="<?= $page->getLang() ?>" class="nojs">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?= $this['page']->getTitle() ?> | PHP & MVC</title>
+	<title><?= $page->getTitle() ?> | PHP & MVC</title>
 <!-- Styles -->
 	<link href="https://demo.elodiebayet.com/neptune/assets/css/common.css" rel="stylesheet" type="text/css" media="screen">
 	<link href="https://demo.elodiebayet.com/neptune/assets/css/theme.css" rel="stylesheet" type="text/css" media="screen">
 	<link href="https://demo.elodiebayet.com/neptune/assets/css/chronographic.css" rel="stylesheet" type="text/css" media="screen">
 	<link href="/assets/css/phpmvc.css" rel="stylesheet" type="text/css" media="screen">
 <!-- Identity and parameters -->
-	<meta name="description" content="<?= $this['page']->getDescription() ?>">
+	<meta name="description" content="<?= $page->getDescription() ?>">
 	<meta name="author" content="Elodie Bayet, www.elodiebayet.com">
 	<meta name="copyright" content="Elodie Bayet © 2025">
 	<meta name="theme-color" content="#0c7f8e">
 	<link rel="icon" href="https://www.elodiebayet.com/shared/trademark/elodie_bayet_side_favicon.png" type="image/png">
 <!-- Sharing Properties -->
-	<meta property="og:title" content="<?= $this['page']->getTitle() ?> | PHP & MVC">
+	<meta property="og:title" content="<?= $page->getTitle() ?> | PHP & MVC">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://demo.elodiebayet.com<?= $_SERVER['REQUEST_URI']; ?>">
-	<meta property="og:description" content="<?= $this['page']->getDescription() ?>">
+	<meta property="og:description" content="<?= $page->getDescription() ?>">
 	<meta property="og:image" content="https://www.elodiebayet.com/assets/ads/elodiebayet_websitebanner.jpg">
 	<meta property="og:image:type" content="image/jpeg">
 	<meta property="og:image:width" content="1200">
@@ -27,7 +31,7 @@
 <!-- Scripts -->
 	<script type="module" src="/assets/js/main.js" id="jsMain"></script>
 </head>
-<body id="<?= $this['page']->getId() ?>">
+<body id="<?= $page->getId() ?>">
 	<header id="uihead" class="closed">
 		<div class="inner">
 			<div class="headline">
@@ -41,9 +45,9 @@
 				<nav class="mainmenu">
 					<h3 class="blind"><?= $this['ui']['main'] ?></h3>
 					<ul>
-						<?php foreach ($this['page']->getMains() as $route) : ?>
+						<?php foreach ($page->getMains() as $navigation) : ?>
 						<li>
-							<a href="/<?= $this['page']->getLang() . $route->getSlug() ?>" title="<?= $this['ui']['gotopage'] ?>" <?= $this['page']->getId() === $route->getCode() ? 'class="selected"' : '' ?>><?= $route->getLabel() ?></a>
+							<a href="/<?= $page->getLang() . $navigation->getPath() ?>" title="<?= $this['ui']['gotopage'] ?>" <?= $page->getId() === $navigation->getCode() ? 'class="selected"' : '' ?>><?= $navigation->getLabel() ?></a>
 						</li>
 						<?php endforeach; ?>
 					</ul>
@@ -51,11 +55,11 @@
 				<nav class="langmenu">
 					<h3 class="blind"><?= $this['ui']['languages'] ?></h3>
 					<ul>
-					<?php foreach ($this['page']->getVersions() as $version) : ?>
+					<?php foreach ($page->getVersions() as $version) : ?>
 						<li>
-							<a 	href="<?= $this['page']->getLang() === $version->getIsoCode() ? '#' : '/' . $version->getIsoCode() . $version->getRoute()->getSlug() ?>" 
+							<a 	href="<?= $page->getLang() === $version->getIsoCode() ? '#' : '/' . $version->getIsoCode() . $version->getNavigation()->getPath() ?>" 
 								title="<?= $this['ui']['switchlang'] ?>" 
-								<?= $this['page']->getLang() === $version->getIsoCode() ? 'class="selected"' : '' ?>><?= $version->getLabel() ?>
+								<?= $page->getLang() === $version->getIsoCode() ? 'class="selected"' : '' ?>><?= $version->getLabel() ?>
 							</a>
 						</li>
 					<?php endforeach; ?>
@@ -69,7 +73,7 @@
 	</header>
 	<main>
 		<header>
-			<h1><?= $this['page']->getH1() ?></h1>
+			<h1><?= $page->getH1() ?></h1>
 			<p><?= $this['ui']['subtitle'] ?></p>
 			<a href="https://github.com/ElodieBayet/php-mvc" class="tab url"><span class="github">&nbsp;</span><?= $this['ui']['seeproject'] ?> GitHub</a>
 		</header>
@@ -87,9 +91,9 @@
 			<nav class="secondmenu">
 				<h3 class="blind"><?= $this['ui']['second'] ?></h3>
 				<ul>
-					<?php foreach ($this['page']->getSeconds() as $route) : ?>
-					<li <?= $this['page']->getId() === $route->getCode() ? 'class="selected"' : '' ?>>
-						<a href="/<?= $this['page']->getLang() . $route->getSlug() ?>" title="<?= $this['ui']['gotopage'] ?>"><?= $route->getLabel() ?></a>
+					<?php foreach ($page->getSeconds() as $navigation) : ?>
+					<li <?= $page->getId() === $navigation->getCode() ? 'class="selected"' : '' ?>>
+						<a href="/<?= $page->getLang() . $navigation->getPath() ?>" title="<?= $this['ui']['gotopage'] ?>"><?= $navigation->getLabel() ?></a>
 					</li>
 					<?php endforeach; ?>
 				</ul>

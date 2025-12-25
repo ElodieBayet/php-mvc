@@ -33,23 +33,29 @@ abstract class AbstractResolver
         return new $controller($page);
     }
 
-    public static function method(Request $request, AbstractController $controller): string
+    public static function method(Request $request, AbstractController $controller): \ReflectionMethod
     {
-        /** @todo Avoid dichotomous method resolution : Allow multiple routes */
-        $method = array_key_exists(1, $request->getPath()) ? 'view' : 'index';
+        $reflectionClass = new \ReflectionClass($controller::class);
+        $method = null;
 
-        if (!method_exists($controller, $method)) {
-            throw new \Exception("Can't find $method in '" . $controller::class . "'");
+        $method = array_find($reflectionClass->getMethods(), function($method) use ($request) {
+            return array_find($method->getAttributes(Route::class, \ReflectionAttribute::IS_INSTANCEOF), function($attribute) use ($request) {
+                $routeInstance = $attribute->newInstance();
+                $slug = implode('/', $request->getPath());
+                return $routeInstance->isMethodMatch($request->getMethod()) && $routeInstance->isUrlMatch('/' . $slug, $request->getLocale());
+            });
+        });
+
+        if (null === $method) {
+            throw new HttpErrorException("Can't find destination for '" . implode('/', $request->getPath()) . "'", Response::HTTP_NOT_FOUND);
         }
 
         return $method;
     }
 
-    public static function arguments(Request $request, AbstractController $controller, string $endpoint): array
+    public static function arguments(Request $request, \ReflectionMethod $method): array
     {
         $arguments = [];
-        $class = new \ReflectionClass($controller::class);
-        $method = $class->getMethod($endpoint);
 
         foreach ($method->getParameters() as $param) {
             if (!$param->getType()->isBuiltin()) {
