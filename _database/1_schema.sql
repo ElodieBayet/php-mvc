@@ -4,8 +4,6 @@
 -- Exécution : 1
 --
 
-USE php_mvc;
-
 CREATE TABLE `period` (
     `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     `begin` SMALLINT UNSIGNED NOT NULL,

@@ -4,13 +4,11 @@
 -- Exécution : 2
 --
 
-USE php_mvc;
-
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (1, 600, 1400);
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (2, 1400, 1600);
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (3, 1600, 1750);
-INSERT INTO `period` (`id`, `begin`, `end`) VALUES (4, 1750, 1800);
-INSERT INTO `period` (`id`, `begin`, `end`) VALUES (5, 1800, 1900);
+INSERT INTO `period` (`id`, `begin`, `end`) VALUES (4, 1750, 1820);
+INSERT INTO `period` (`id`, `begin`, `end`) VALUES (5, 1820, 1900);
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (6, 1900, 1950);
 INSERT INTO `period` (`id`, `begin`, `end`) VALUES (7, 1950, NULL);
 
