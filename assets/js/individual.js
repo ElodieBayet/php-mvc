@@ -1,12 +1,8 @@
 'use strict';
 /**
- * @author :: Elodie Bayet
- *   @role :: Fullstack Web Developer
- *   @date :: 2020.04 + 2021.09
- * @origin :: Belgium, EU
+ * @author Elodie Bayet
+ *   @file Individual Scripts for special Pages
  */
-
-/** @file Individual Scripts for special Pages */
 
 /**
  * Toggle Language

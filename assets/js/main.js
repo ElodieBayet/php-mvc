@@ -1,14 +1,11 @@
 'use strict';
 /**
- * @author :: Elodie Bayet
- * @origin :: Belgium, EU
- *   @role :: Fullstack Web Developer
- *   @date :: 2025.06
- *   @file :: Main Program for Modules
+ * @author Elodie Bayet
+ *   @file Main Program for Modules
  */
 
-import GUIService from 'https://demo.elodiebayet.com/neptune/assets/js/lib/guiService.js';
-import HeaderManager from 'https://demo.elodiebayet.com/neptune/assets/js/lib/headerManager.js';
+import GUIService from 'https://demo.elodiebayet.com/warehouse/js/services/guiService.js'; 
+import HeaderManager from 'https://demo.elodiebayet.com/warehouse/js/managers/headerManager.js';
 
 // Remove class '.nojs'
 document.documentElement.removeAttribute('class');
@@ -27,7 +24,8 @@ const source = 'https://demo.elodiebayet.com/neptune/assets/';
 			const headerManager = new HeaderManager(
 				uihead,
 				document.querySelector('#uihead button'),
-				document.querySelector('#uihead .navigation')
+				document.querySelector('#uihead .navigation'),
+				960
 			);
 
 			GUIService.delayedResizer(headerManager.autoCompute);
